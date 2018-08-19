@@ -1,6 +1,3 @@
-# golang-notes
-> Golang 学习笔记
-
 # Summary
 
 * [Introduction](README.md)
