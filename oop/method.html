@@ -1,14 +1,14 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>3.2. 方法 · GitBook</title>
+        <title>3.2. 方法 · Golang 学习笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="胡伟煌">
         
         
     
@@ -17,11 +17,31 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
                 
             
                 
@@ -49,6 +69,8 @@
         
     
     
+    
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -63,6 +85,26 @@
     <link rel="prev" href="oop.html" />
     
 
+    
+        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"huweihuang/golang-notes","types":["star"],"size":"small"};
+    </script>
+
     </head>
     <body>
         
@@ -71,7 +113,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -82,7 +124,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://www.huweihuang.com" target="_blank" class="custom-link">胡伟煌</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -94,6 +145,8 @@
                 <a href="../">
             
                     
+                        <b>1.1.</b>
+                    
                     Introduction
             
                 </a>
@@ -102,10 +155,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../introduction/README.md">
+        <li class="chapter " data-level="1.2" data-path="../introduction/">
             
-                <span>
+                <a href="../introduction/">
             
+                    
+                        <b>1.2.</b>
                     
                     1. Golang介绍
             
@@ -121,6 +176,8 @@
                 <a href="../introduction/golang.html">
             
                     
+                        <b>1.2.1.</b>
+                    
                     1.1. Golang介绍
             
                 </a>
@@ -133,6 +190,8 @@
             
                 <a href="../introduction/install.html">
             
+                    
+                        <b>1.2.2.</b>
                     
                     1.2. Goalng安装
             
@@ -147,10 +206,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../basis/README.md">
+        <li class="chapter " data-level="1.3" data-path="../basis/">
             
-                <span>
+                <a href="../basis/">
             
+                    
+                        <b>1.3.</b>
                     
                     2. 顺序编程
             
@@ -166,6 +227,8 @@
                 <a href="../basis/program-structure.html">
             
                     
+                        <b>1.3.1.</b>
+                    
                     2.1. 程序结构
             
                 </a>
@@ -178,6 +241,8 @@
             
                 <a href="../basis/data-types.html">
             
+                    
+                        <b>1.3.2.</b>
                     
                     2.2. 基本类型
             
@@ -192,6 +257,8 @@
                 <a href="../basis/control-structures.html">
             
                     
+                        <b>1.3.3.</b>
+                    
                     2.3. 流程控制
             
                 </a>
@@ -204,6 +271,8 @@
             
                 <a href="../basis/functions.html">
             
+                    
+                        <b>1.3.4.</b>
                     
                     2.4. 函数
             
@@ -218,6 +287,8 @@
                 <a href="../basis/errors.html">
             
                     
+                        <b>1.3.5.</b>
+                    
                     2.5. 错误处理
             
                 </a>
@@ -231,10 +302,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="README.md">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <span>
+                <a href="./">
             
+                    
+                        <b>1.4.</b>
                     
                     3. 面向对象编程
             
@@ -250,6 +323,8 @@
                 <a href="oop.html">
             
                     
+                        <b>1.4.1.</b>
+                    
                     3.1. 概述
             
                 </a>
@@ -262,6 +337,8 @@
             
                 <a href="method.html">
             
+                    
+                        <b>1.4.2.</b>
                     
                     3.2. 方法
             
@@ -276,6 +353,8 @@
                 <a href="interface.html">
             
                     
+                        <b>1.4.3.</b>
+                    
                     3.3. 接口
             
                 </a>
@@ -288,6 +367,8 @@
             
                 <a href="pointer.html">
             
+                    
+                        <b>1.4.4.</b>
                     
                     3.4. 指针
             
@@ -302,10 +383,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../concurrency/README.md">
+        <li class="chapter " data-level="1.5" data-path="../concurrency/">
             
-                <span>
+                <a href="../concurrency/">
             
+                    
+                        <b>1.5.</b>
                     
                     4. 并发编程
             
@@ -321,6 +404,8 @@
                 <a href="../concurrency/concurrency.html">
             
                     
+                        <b>1.5.1.</b>
+                    
                     4.1. 并发基础
             
                 </a>
@@ -333,6 +418,8 @@
             
                 <a href="../concurrency/goroutine.html">
             
+                    
+                        <b>1.5.2.</b>
                     
                     4.2. Goroutine
             
@@ -347,6 +434,8 @@
                 <a href="../concurrency/channel.html">
             
                     
+                        <b>1.5.3.</b>
+                    
                     4.3. Channel
             
                 </a>
@@ -359,6 +448,8 @@
             
                 <a href="../concurrency/parallelization.html">
             
+                    
+                        <b>1.5.4.</b>
                     
                     4.4. 并行化
             
@@ -380,7 +471,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -413,7 +504,7 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
@@ -429,46 +520,46 @@
 <p><strong>&#x7ED3;&#x6784;&#x4F53;[&#x7C7B;&#x5C5E;&#x6027;&#x7684;&#x58F0;&#x660E;]</strong></p>
 <p>struct&#x7684;&#x529F;&#x80FD;&#x7C7B;&#x4F3C;Java&#x7684;class&#xFF0C;&#x53EF;&#x5B9E;&#x73B0;&#x5D4C;&#x5957;&#x7EC4;&#x5408;(&#x7C7B;&#x4F3C;&#x7EE7;&#x627F;&#x7684;&#x529F;&#x80FD;)
 struct&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x590D;&#x5408;&#x7C7B;&#x578B;&#xFF0C;&#x53EA;&#x662F;&#x5BF9;&#x7C7B;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#x8D4B;&#x503C;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x5BF9;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#xFF0C;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x5B9A;&#x4E49;&#x7ED1;&#x5B9A;&#x5230;&#x8BE5;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x4E0A;&#xFF0C;&#x66F4;&#x5177;&#x7075;&#x6D3B;&#x6027;&#x3002;&#x53EF;&#x5229;&#x7528;&#x5D4C;&#x5957;&#x7EC4;&#x5408;&#x6765;&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;&#x7EE7;&#x627F;&#x7684;&#x529F;&#x80FD;&#x907F;&#x514D;&#x4EE3;&#x7801;&#x91CD;&#x590D;&#x3002;</p>
-<pre><code class="lang-go"><span class="hljs-keyword">type</span> Rect <span class="hljs-keyword">struct</span>{   <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x77E9;&#x5F62;&#x7C7B;</span>
-  x,y <span class="hljs-keyword">float64</span>       <span class="hljs-comment">//&#x7C7B;&#x578B;&#x53EA;&#x5305;&#x542B;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x65B9;&#x6CD5;</span>
-  width,height <span class="hljs-keyword">float64</span>
-}
-<span class="hljs-keyword">func</span> (r *Rect) Area() <span class="hljs-keyword">float64</span>{    <span class="hljs-comment">//&#x4E3A;Rect&#x7C7B;&#x578B;&#x7ED1;&#x5B9A;Area&#x7684;&#x65B9;&#x6CD5;&#xFF0C;*Rect&#x4E3A;&#x6307;&#x9488;&#x5F15;&#x7528;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7684;&#x503C;</span>
-  <span class="hljs-keyword">return</span> r.width*r.height         <span class="hljs-comment">//&#x65B9;&#x6CD5;&#x5F52;&#x5C5E;&#x4E8E;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x5F52;&#x5C5E;&#x4E8E;&#x5177;&#x4F53;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x58F0;&#x660E;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x5373;&#x53EF;&#x8C03;&#x7528;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;</span>
-}
+<pre class="language-"><code class="lang-go"><span class="token keyword">type</span> Rect <span class="token keyword">struct</span><span class="token punctuation">{</span>   <span class="token comment">//&#x5B9A;&#x4E49;&#x77E9;&#x5F62;&#x7C7B;</span>
+  x<span class="token punctuation">,</span>y <span class="token builtin">float64</span>       <span class="token comment">//&#x7C7B;&#x578B;&#x53EA;&#x5305;&#x542B;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x65B9;&#x6CD5;</span>
+  width<span class="token punctuation">,</span>height <span class="token builtin">float64</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>r <span class="token operator">*</span>Rect<span class="token punctuation">)</span> <span class="token function">Area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">float64</span><span class="token punctuation">{</span>    <span class="token comment">//&#x4E3A;Rect&#x7C7B;&#x578B;&#x7ED1;&#x5B9A;Area&#x7684;&#x65B9;&#x6CD5;&#xFF0C;*Rect&#x4E3A;&#x6307;&#x9488;&#x5F15;&#x7528;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7684;&#x503C;</span>
+  <span class="token keyword">return</span> r<span class="token punctuation">.</span>width<span class="token operator">*</span>r<span class="token punctuation">.</span>height         <span class="token comment">//&#x65B9;&#x6CD5;&#x5F52;&#x5C5E;&#x4E8E;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x5F52;&#x5C5E;&#x4E8E;&#x5177;&#x4F53;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x58F0;&#x660E;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x5373;&#x53EF;&#x8C03;&#x7528;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="3-&#x65B9;&#x6CD5;">3. &#x65B9;&#x6CD5;</h2>
 <p>1&#x3001;&#x4E3A;&#x7C7B;&#x578B;&#x6DFB;&#x52A0;&#x65B9;&#x6CD5;[&#x7C7B;&#x65B9;&#x6CD5;&#x58F0;&#x660E;]&#xFF0C;&#x65B9;&#x6CD5;&#x5373;&#x4E3A;&#x6709;&#x63A5;&#x6536;&#x8005;&#x7684;&#x51FD;&#x6570;
 func (&#x5BF9;&#x8C61;&#x540D; &#x5BF9;&#x8C61;&#x7C7B;&#x578B;) &#x51FD;&#x6570;&#x540D;(&#x53C2;&#x6570;&#x5217;&#x8868;) (&#x8FD4;&#x56DE;&#x503C;&#x5217;&#x8868;)
 &#x53EF;&#x968F;&#x65F6;&#x4E3A;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x65B9;&#x6CD5;&#x5373;&#x4E3A;&#x67D0;&#x4E2A;&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x5F52;&#x5C5E;&#x5BF9;&#x8C61;&#xFF08;receiver&#xFF09;&#xFF0C;&#x4EE5;&#x65B9;&#x6CD5;&#x4E3A;&#x4E2D;&#x5FC3;
 &#x5728;Go&#x8BED;&#x8A00;&#x4E2D;&#x6CA1;&#x6709;&#x9690;&#x85CF;&#x7684;this&#x6307;&#x9488;&#xFF0C;&#x5373;&#x663E;&#x793A;&#x4F20;&#x9012;&#xFF0C;&#x5F62;&#x53C2;&#x5373;&#x4E3A;this&#xFF0C;&#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x7684;&#x5F62;&#x53C2;&#x4E3A;a&#x3002;</p>
-<pre><code class="lang-go"><span class="hljs-keyword">type</span> Integer <span class="hljs-keyword">int</span>
-<span class="hljs-keyword">func</span> (a Integer) Less(b Integer) <span class="hljs-keyword">bool</span>{  <span class="hljs-comment">//&#x8868;&#x793A;a&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;&#x4E86;Less&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;a&#x53EF;&#x4EE5;&#x4E3A;&#x4EFB;&#x610F;&#x7C7B;&#x578B;</span>
-  <span class="hljs-keyword">return</span> a&lt;b                           
-}
-<span class="hljs-comment">//&#x7C7B;&#x578B;&#x57FA;&#x4E8E;&#x503C;&#x4F20;&#x9012;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x4FEE;&#x6539;&#x503C;&#x9700;&#x8981;&#x4F20;&#x9012;&#x6307;&#x9488;</span>
-<span class="hljs-keyword">func</span> (a *Integer) Add(b Integer){
-  *a+=b    <span class="hljs-comment">//&#x901A;&#x8FC7;&#x6307;&#x9488;&#x4F20;&#x9012;&#x6765;&#x6539;&#x53D8;&#x503C;</span>
-}
+<pre class="language-"><code class="lang-go"><span class="token keyword">type</span> Integer <span class="token builtin">int</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>a Integer<span class="token punctuation">)</span> <span class="token function">Less</span><span class="token punctuation">(</span>b Integer<span class="token punctuation">)</span> <span class="token builtin">bool</span><span class="token punctuation">{</span>  <span class="token comment">//&#x8868;&#x793A;a&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;&#x4E86;Less&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;a&#x53EF;&#x4EE5;&#x4E3A;&#x4EFB;&#x610F;&#x7C7B;&#x578B;</span>
+  <span class="token keyword">return</span> a<span class="token operator">&lt;</span>b                           
+<span class="token punctuation">}</span>
+<span class="token comment">//&#x7C7B;&#x578B;&#x57FA;&#x4E8E;&#x503C;&#x4F20;&#x9012;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x4FEE;&#x6539;&#x503C;&#x9700;&#x8981;&#x4F20;&#x9012;&#x6307;&#x9488;</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>a <span class="token operator">*</span>Integer<span class="token punctuation">)</span> <span class="token function">Add</span><span class="token punctuation">(</span>b Integer<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token operator">*</span>a<span class="token operator">+=</span>b    <span class="token comment">//&#x901A;&#x8FC7;&#x6307;&#x9488;&#x4F20;&#x9012;&#x6765;&#x6539;&#x53D8;&#x503C;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="4-&#x503C;&#x8BED;&#x4E49;&#x548C;&#x5F15;&#x7528;&#x8BED;&#x4E49;">4. &#x503C;&#x8BED;&#x4E49;&#x548C;&#x5F15;&#x7528;&#x8BED;&#x4E49;</h2>
 <p>&#x503C;&#x7C7B;&#x578B;&#xFF1A;b&#x7684;&#x4FEE;&#x6539;&#x5E76;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;a&#x7684;&#x503C;</p>
 <p>&#x5F15;&#x7528;&#x7C7B;&#x578B;&#xFF1A;b&#x7684;&#x4FEE;&#x6539;&#x4F1A;&#x5F71;&#x54CD;a&#x7684;&#x503C;</p>
 <p>Go&#x5927;&#x591A;&#x7C7B;&#x578B;&#x4E3A;&#x503C;&#x8BED;&#x4E49;&#xFF0C;&#x5305;&#x62EC;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#xFF1A;byte&#xFF0C;int&#xFF0C;string&#x7B49;&#xFF1B;&#x590D;&#x5408;&#x7C7B;&#x578B;&#xFF1A;&#x6570;&#x7EC4;&#xFF0C;&#x7ED3;&#x6784;&#x4F53;(struct)&#xFF0C;&#x6307;&#x9488;&#x7B49;</p>
-<pre><code class="lang-go"><span class="hljs-comment">//2&#x3001;&#x503C;&#x8BED;&#x4E49;&#x548C;&#x5F15;&#x7528;&#x8BED;&#x4E49;</span>
-b=a
-b.Modify()
+<pre class="language-"><code class="lang-go"><span class="token comment">//2&#x3001;&#x503C;&#x8BED;&#x4E49;&#x548C;&#x5F15;&#x7528;&#x8BED;&#x4E49;</span>
+b<span class="token operator">=</span>a
+b<span class="token punctuation">.</span><span class="token function">Modify</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">//&#x503C;&#x7C7B;&#x578B;</span>
-<span class="hljs-keyword">var</span> a=[<span class="hljs-number">3</span>]<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>}
-b:=a
-b[<span class="hljs-number">1</span>]++
-fmt.Println(a,b)   <span class="hljs-comment">//a=[1,2,3]  b=[1,3,3]</span>
-<span class="hljs-comment">//&#x5F15;&#x7528;&#x7C7B;&#x578B;</span>
-a:=[<span class="hljs-number">3</span>]<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>}
-b:=&amp;a              <span class="hljs-comment">//b&#x6307;&#x5411;a,&#x5373;&#x4E3A;a&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5BF9;b&#x6307;&#x5411;&#x7684;&#x503C;&#x6539;&#x53D8;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x5BF9;a&#x7684;&#x6539;&#x53D8;&#xFF08;&#x6570;&#x7EC4;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x5730;&#x5740;&#x6307;&#x5411;&#xFF09;</span>
-b[<span class="hljs-number">1</span>]++
-fmt.Println(a,*b)  <span class="hljs-comment">//a=[1,3,3]  b=[1,3,3]   //*b,&#x53D6;&#x5730;&#x5740;&#x6307;&#x5411;&#x7684;&#x503C;</span>
+<span class="token comment">//&#x503C;&#x7C7B;&#x578B;</span>
+<span class="token keyword">var</span> a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span>
+b<span class="token operator">:=</span>a
+b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">++</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span>   <span class="token comment">//a=[1,2,3]  b=[1,3,3]</span>
+<span class="token comment">//&#x5F15;&#x7528;&#x7C7B;&#x578B;</span>
+a<span class="token operator">:=</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span>
+b<span class="token operator">:=</span><span class="token operator">&amp;</span>a              <span class="token comment">//b&#x6307;&#x5411;a,&#x5373;&#x4E3A;a&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5BF9;b&#x6307;&#x5411;&#x7684;&#x503C;&#x6539;&#x53D8;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x5BF9;a&#x7684;&#x6539;&#x53D8;&#xFF08;&#x6570;&#x7EC4;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x5730;&#x5740;&#x6307;&#x5411;&#xFF09;</span>
+b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">++</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span><span class="token operator">*</span>b<span class="token punctuation">)</span>  <span class="token comment">//a=[1,3,3]  b=[1,3,3]   //*b,&#x53D6;&#x5730;&#x5740;&#x6307;&#x5411;&#x7684;&#x503C;</span>
 </code></pre>
 <h2 id="5-&#x521D;&#x59CB;&#x5316;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;">5. &#x521D;&#x59CB;&#x5316;[&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;]</h2>
 <p> &#x6570;&#x636E;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5185;&#x5EFA;&#x51FD;&#x6570;new()&#x4E0E;make()&#xFF0C;&#x4E8C;&#x8005;&#x90FD;&#x662F;&#x7528;&#x6765;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#x3002;&#x533A;&#x522B;&#x5982;&#x4E0B;:</p>
@@ -483,71 +574,73 @@ fmt.Println(a,*b)  <span class="hljs-comment">//a=[1,3,3]  b=[1,3,3]   //*b,&#x5
 <li>&#x5185;&#x5EFA;&#x51FD;&#x6570; <code>make</code> &#x5206;&#x914D;&#x5E76;&#x4E14;&#x521D;&#x59CB;&#x5316; &#x4E00;&#x4E2A; slice, &#x6216;&#x8005; map &#x6216;&#x8005; chan &#x5BF9;&#x8C61;&#x3002; &#x5E76;&#x4E14;&#x53EA;&#x80FD;&#x662F;&#x8FD9;&#x4E09;&#x79CD;&#x5BF9;&#x8C61;&#x3002; &#x548C; <code>new</code> &#x4E00;&#x6837;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F; &#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x503C;&#x3002; &#x4F46;&#x662F;<code>make</code> &#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#xFF08;&#x5373;&#x4F7F;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6307;&#x9488;&#x3002; &#x5177;&#x4F53;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x4F9D;&#x8D56;&#x5177;&#x4F53;&#x4F20;&#x5165;&#x7684;&#x7C7B;&#x578B;&#x3002;</li>
 </ol>
 <h3 id="53-&#x793A;&#x4F8B;">5.3. &#x793A;&#x4F8B;</h3>
-<pre><code class="lang-go"><span class="hljs-comment">//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;</span>
-rect1:=<span class="hljs-built_in">new</span>(Rect)   <span class="hljs-comment">//new&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</span>
-rect2:=&amp;Rect{}     <span class="hljs-comment">//&#x4E3A;&#x8D4B;&#x503C;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;bool&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;false&#xFF0C;int&#x9ED8;&#x8BA4;&#x4E3A;&#x96F6;&#x503C;0&#xFF0C;string&#x9ED8;&#x8BA4;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span>
-rect3:=&amp;Rect{<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">100</span>,<span class="hljs-number">200</span>}     <span class="hljs-comment">//&#x53D6;&#x5730;&#x5740;&#x5E76;&#x8D4B;&#x503C;,&#x6309;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x987A;&#x5E8F;&#x4F9D;&#x6B21;&#x8D4B;&#x503C;</span>
-rect4:=&amp;Rect{width:<span class="hljs-number">100</span>,height:<span class="hljs-number">200</span>}    <span class="hljs-comment">//&#x6309;&#x53D8;&#x91CF;&#x540D;&#x8D4B;&#x503C;&#x4E0D;&#x6309;&#x987A;&#x5E8F;&#x8D4B;&#x503C;</span>
-<span class="hljs-comment">//&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF1A;&#x6CA1;&#x6709;&#x6784;&#x9020;&#x53C2;&#x6570;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x901A;&#x5E38;&#x7531;&#x5168;&#x5C40;&#x7684;&#x521B;&#x5EFA;&#x51FD;&#x6570;NewXXX&#x6765;&#x5B9E;&#x73B0;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x529F;&#x80FD;</span>
-<span class="hljs-keyword">func</span> NewRect(x,y,width,height <span class="hljs-keyword">float64</span>) *Rect{
-  <span class="hljs-keyword">return</span> &amp;Rect{x,y,width,height}     <span class="hljs-comment">//&#x5229;&#x7528;&#x6307;&#x9488;&#x6765;&#x6539;&#x53D8;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7684;&#x503C;&#x8FBE;&#x5230;&#x7C7B;&#x4F3C;&#x6784;&#x9020;&#x53C2;&#x6570;&#x7684;&#x6548;&#x679C;</span>
-}
-<span class="hljs-comment">//&#x65B9;&#x6CD5;&#x7684;&#x91CD;&#x8F7D;,Go&#x4E0D;&#x652F;&#x6301;&#x65B9;&#x6CD5;&#x7684;&#x91CD;&#x8F7D;&#xFF08;&#x51FD;&#x6570;&#x540C;&#x540D;&#xFF0C;&#x53C2;&#x6570;&#x4E0D;&#x540C;&#xFF09;</span>
-<span class="hljs-comment">//v &#x2026;interface{}&#x8868;&#x793A;&#x53C2;&#x6570;&#x4E0D;&#x5B9A;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x5176;&#x4E2D;v&#x662F;slice&#x7C7B;&#x578B;&#xFF0C;&#x53CA;&#x58F0;&#x660E;&#x4E0D;&#x5B9A;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;&#x65B9;&#x6CD5;&#x7684;&#x91CD;&#x8F7D;</span>
-<span class="hljs-keyword">func</span> (poem *Poem) recite(v ...<span class="hljs-keyword">interface</span>{}) {
-    fmt.Println(v)
-}
+<pre class="language-"><code class="lang-go"><span class="token comment">//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;</span>
+rect1<span class="token operator">:=</span><span class="token function">new</span><span class="token punctuation">(</span>Rect<span class="token punctuation">)</span>   <span class="token comment">//new&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</span>
+rect2<span class="token operator">:=</span><span class="token operator">&amp;</span>Rect<span class="token punctuation">{</span><span class="token punctuation">}</span>     <span class="token comment">//&#x4E3A;&#x8D4B;&#x503C;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;bool&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;false&#xFF0C;int&#x9ED8;&#x8BA4;&#x4E3A;&#x96F6;&#x503C;0&#xFF0C;string&#x9ED8;&#x8BA4;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span>
+rect3<span class="token operator">:=</span><span class="token operator">&amp;</span>Rect<span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">}</span>     <span class="token comment">//&#x53D6;&#x5730;&#x5740;&#x5E76;&#x8D4B;&#x503C;,&#x6309;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x987A;&#x5E8F;&#x4F9D;&#x6B21;&#x8D4B;&#x503C;</span>
+rect4<span class="token operator">:=</span><span class="token operator">&amp;</span>Rect<span class="token punctuation">{</span>width<span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">,</span>height<span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">}</span>    <span class="token comment">//&#x6309;&#x53D8;&#x91CF;&#x540D;&#x8D4B;&#x503C;&#x4E0D;&#x6309;&#x987A;&#x5E8F;&#x8D4B;&#x503C;</span>
+<span class="token comment">//&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF1A;&#x6CA1;&#x6709;&#x6784;&#x9020;&#x53C2;&#x6570;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x901A;&#x5E38;&#x7531;&#x5168;&#x5C40;&#x7684;&#x521B;&#x5EFA;&#x51FD;&#x6570;NewXXX&#x6765;&#x5B9E;&#x73B0;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x529F;&#x80FD;</span>
+<span class="token keyword">func</span> <span class="token function">NewRect</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>width<span class="token punctuation">,</span>height <span class="token builtin">float64</span><span class="token punctuation">)</span> <span class="token operator">*</span>Rect<span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token operator">&amp;</span>Rect<span class="token punctuation">{</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>width<span class="token punctuation">,</span>height<span class="token punctuation">}</span>     <span class="token comment">//&#x5229;&#x7528;&#x6307;&#x9488;&#x6765;&#x6539;&#x53D8;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7684;&#x503C;&#x8FBE;&#x5230;&#x7C7B;&#x4F3C;&#x6784;&#x9020;&#x53C2;&#x6570;&#x7684;&#x6548;&#x679C;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//&#x65B9;&#x6CD5;&#x7684;&#x91CD;&#x8F7D;,Go&#x4E0D;&#x652F;&#x6301;&#x65B9;&#x6CD5;&#x7684;&#x91CD;&#x8F7D;&#xFF08;&#x51FD;&#x6570;&#x540C;&#x540D;&#xFF0C;&#x53C2;&#x6570;&#x4E0D;&#x540C;&#xFF09;</span>
+<span class="token comment">//v &#x2026;interface{}&#x8868;&#x793A;&#x53C2;&#x6570;&#x4E0D;&#x5B9A;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x5176;&#x4E2D;v&#x662F;slice&#x7C7B;&#x578B;&#xFF0C;&#x53CA;&#x58F0;&#x660E;&#x4E0D;&#x5B9A;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;&#x65B9;&#x6CD5;&#x7684;&#x91CD;&#x8F7D;</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>poem <span class="token operator">*</span>Poem<span class="token punctuation">)</span> <span class="token function">recite</span><span class="token punctuation">(</span>v <span class="token operator">...</span><span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="6-&#x533F;&#x540D;&#x7EC4;&#x5408;&#x7EE7;&#x627F;">6. &#x533F;&#x540D;&#x7EC4;&#x5408;[&#x7EE7;&#x627F;]</h2>
 <p>&#x200B;       &#x7EC4;&#x5408;&#xFF0C;&#x5373;&#x65B9;&#x6CD5;&#x4EE3;&#x7406;&#xFF0C;&#x4F8B;&#x5982;A&#x5305;&#x542B;B&#xFF0C;&#x5373;A&#x901A;&#x8FC7;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x7684;&#x5F62;&#x5F0F;&#x4EE3;&#x7406;&#x4E86;B&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x590D;&#x5199;B&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
 <p>&#x200B;       &#x7EE7;&#x627F;&#x662F;&#x6307;&#x8FD9;&#x6837;&#x4E00;&#x79CD;&#x80FD;&#x529B;&#xFF1A;&#x5B83;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x73B0;&#x6709;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x529F;&#x80FD;&#xFF0C;&#x5E76;&#x5728;&#x65E0;&#x9700;&#x91CD;&#x65B0;&#x7F16;&#x5199;&#x539F;&#x6765;&#x7684;&#x7C7B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5BF9;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x6269;&#x5C55;&#x3002;&#x7EE7;&#x627F;&#x4E3B;&#x8981;&#x4E3A;&#x4E86;&#x4EE3;&#x7801;&#x590D;&#x7528;&#xFF0C;&#x7EE7;&#x627F;&#x4E5F;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x4EE3;&#x7801;&#x6A21;&#x5757;&#xFF08;&#x7C7B;&#xFF09;&#x3002;</p>
 <p>&#x200B;       &#x4E25;&#x683C;&#x6765;&#x8BB2;&#xFF0C;&#x7EE7;&#x627F;&#x662F;&#x201C;a kind of &#x201D;&#xFF0C;&#x5373;&#x5B50;&#x7C7B;&#x662F;&#x7236;&#x7C7B;&#x7684;&#x4E00;&#x79CD;&#xFF0C;&#x4F8B;&#x5982;student&#x662F;person&#x7684;&#x4E00;&#x79CD;&#xFF1B;&#x7EC4;&#x5408;&#x662F;&#x201C;a part of&#x201D;&#xFF0C;&#x5373;&#x7236;&#x7C7B;&#x662F;&#x5B50;&#x7C7B;&#x4E2D;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4F8B;&#x5982;&#x773C;&#x775B;&#x662F;&#x5934;&#x90E8;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
-<pre><code class="lang-go"><span class="hljs-comment">//1&#x3001;&#x533F;&#x540D;&#x7EC4;&#x5408;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x4E86;&#x7C7B;&#x4F3C;Java&#x7EE7;&#x627F;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x7EE7;&#x627F;</span>
-<span class="hljs-keyword">type</span> Base <span class="hljs-keyword">struct</span>{
-  Name <span class="hljs-keyword">string</span>
-}
-<span class="hljs-keyword">func</span> (base *Base) Foo(){...}    <span class="hljs-comment">//Base&#x7684;Foo()&#x65B9;&#x6CD5;</span>
-<span class="hljs-keyword">func</span> (base *Base) Bar(){...}    <span class="hljs-comment">//Base&#x7684;Bar()&#x65B9;&#x6CD5;</span>
-<span class="hljs-keyword">type</span> Foo <span class="hljs-keyword">struct</span>{  
-  Base                         <span class="hljs-comment">//&#x901A;&#x8FC7;&#x7EC4;&#x5408;&#x7684;&#x65B9;&#x5F0F;&#x58F0;&#x660E;&#x4E86;&#x57FA;&#x7C7B;&#xFF0C;&#x5373;&#x7EE7;&#x627F;&#x4E86;&#x57FA;&#x7C7B;</span>
-  ...
-}
-<span class="hljs-keyword">func</span> (foo *Foo) Bar(){
-  foo.Base.Bar()               <span class="hljs-comment">//&#x5E76;&#x6539;&#x5199;&#x4E86;&#x57FA;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x65F6;&#x5148;&#x8C03;&#x7528;&#x57FA;&#x7C7B;&#x7684;Bar()&#x65B9;&#x6CD5;</span>
-  ...                          <span class="hljs-comment">//&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6539;&#x5199;&#x5373;&#x4E3A;&#x7EE7;&#x627F;&#xFF0C;&#x8C03;&#x7528;foo.Foo()&#x548C;&#x8C03;&#x7528;foo.Base.Foo()&#x7684;&#x4F5C;&#x7528;&#x7684;&#x4E00;&#x6837;&#x7684;</span>
-}
-<span class="hljs-comment">//&#x4FEE;&#x6539;&#x5185;&#x5B58;&#x5E03;&#x5C40;</span>
-<span class="hljs-keyword">type</span> Foo <span class="hljs-keyword">struct</span>{
-  ...   <span class="hljs-comment">//&#x5176;&#x4ED6;&#x6210;&#x5458;&#x4FE1;&#x606F;</span>
+<pre class="language-"><code class="lang-go"><span class="token comment">//1&#x3001;&#x533F;&#x540D;&#x7EC4;&#x5408;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x4E86;&#x7C7B;&#x4F3C;Java&#x7EE7;&#x627F;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x7EE7;&#x627F;</span>
+<span class="token keyword">type</span> Base <span class="token keyword">struct</span><span class="token punctuation">{</span>
+  Name <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>base <span class="token operator">*</span>Base<span class="token punctuation">)</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span>    <span class="token comment">//Base&#x7684;Foo()&#x65B9;&#x6CD5;</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>base <span class="token operator">*</span>Base<span class="token punctuation">)</span> <span class="token function">Bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span>    <span class="token comment">//Base&#x7684;Bar()&#x65B9;&#x6CD5;</span>
+<span class="token keyword">type</span> Foo <span class="token keyword">struct</span><span class="token punctuation">{</span>  
+  Base                         <span class="token comment">//&#x901A;&#x8FC7;&#x7EC4;&#x5408;&#x7684;&#x65B9;&#x5F0F;&#x58F0;&#x660E;&#x4E86;&#x57FA;&#x7C7B;&#xFF0C;&#x5373;&#x7EE7;&#x627F;&#x4E86;&#x57FA;&#x7C7B;</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>foo <span class="token operator">*</span>Foo<span class="token punctuation">)</span> <span class="token function">Bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  foo<span class="token punctuation">.</span>Base<span class="token punctuation">.</span><span class="token function">Bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>               <span class="token comment">//&#x5E76;&#x6539;&#x5199;&#x4E86;&#x57FA;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x65F6;&#x5148;&#x8C03;&#x7528;&#x57FA;&#x7C7B;&#x7684;Bar()&#x65B9;&#x6CD5;</span>
+  <span class="token operator">...</span>                          <span class="token comment">//&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6539;&#x5199;&#x5373;&#x4E3A;&#x7EE7;&#x627F;&#xFF0C;&#x8C03;&#x7528;foo.Foo()&#x548C;&#x8C03;&#x7528;foo.Base.Foo()&#x7684;&#x4F5C;&#x7528;&#x7684;&#x4E00;&#x6837;&#x7684;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//&#x4FEE;&#x6539;&#x5185;&#x5B58;&#x5E03;&#x5C40;</span>
+<span class="token keyword">type</span> Foo <span class="token keyword">struct</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span>   <span class="token comment">//&#x5176;&#x4ED6;&#x6210;&#x5458;&#x4FE1;&#x606F;</span>
   Base
-}
-<span class="hljs-comment">//&#x4EE5;&#x6307;&#x9488;&#x65B9;&#x5F0F;&#x7EC4;&#x5408;</span>
-<span class="hljs-keyword">type</span> Foo <span class="hljs-keyword">struct</span>{
-  *Base   <span class="hljs-comment">//&#x4EE5;&#x6307;&#x9488;&#x65B9;&#x5F0F;&#x6D3E;&#x751F;&#xFF0C;&#x521B;&#x5EFA;Foo&#x5B9E;&#x4F8B;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5916;&#x90E8;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;Base&#x7C7B;&#x5B9E;&#x4F8B;&#x7684;&#x6307;&#x9488;</span>
-  ...
-}
-<span class="hljs-comment">//&#x540D;&#x5B57;&#x51B2;&#x7A81;&#x95EE;&#x9898;,&#x7EC4;&#x5408;&#x5185;&#x5916;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x540D;&#x5B57;&#x91CD;&#x590D;&#x95EE;&#x9898;&#xFF0C;&#x53EA;&#x4F1A;&#x8BBF;&#x95EE;&#x5230;&#x6700;&#x5916;&#x5C42;&#xFF0C;&#x5185;&#x5C42;&#x4F1A;&#x88AB;&#x9690;&#x85CF;&#xFF0C;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x5373;&#x7C7B;&#x4F3C;java&#x4E2D;&#x65B9;&#x6CD5;&#x8986;&#x76D6;/&#x91CD;&#x5199;&#x3002;</span>
-<span class="hljs-keyword">type</span> X <span class="hljs-keyword">struct</span>{
-  Name <span class="hljs-keyword">string</span>
-}
-<span class="hljs-keyword">type</span> Y <span class="hljs-keyword">struct</span>{
-  X             <span class="hljs-comment">//Y.X.Name&#x4F1A;&#x88AB;&#x9690;&#x85CF;&#xFF0C;&#x5185;&#x5C42;&#x4F1A;&#x88AB;&#x9690;&#x85CF;</span>
-  Name <span class="hljs-keyword">string</span>   <span class="hljs-comment">//&#x53EA;&#x4F1A;&#x8BBF;&#x95EE;&#x5230;Y.Name&#xFF0C;&#x53EA;&#x4F1A;&#x8C03;&#x7528;&#x5916;&#x5C42;&#x5C5E;&#x6027;</span>
-}
+<span class="token punctuation">}</span>
+<span class="token comment">//&#x4EE5;&#x6307;&#x9488;&#x65B9;&#x5F0F;&#x7EC4;&#x5408;</span>
+<span class="token keyword">type</span> Foo <span class="token keyword">struct</span><span class="token punctuation">{</span>
+  <span class="token operator">*</span>Base   <span class="token comment">//&#x4EE5;&#x6307;&#x9488;&#x65B9;&#x5F0F;&#x6D3E;&#x751F;&#xFF0C;&#x521B;&#x5EFA;Foo&#x5B9E;&#x4F8B;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5916;&#x90E8;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;Base&#x7C7B;&#x5B9E;&#x4F8B;&#x7684;&#x6307;&#x9488;</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//&#x540D;&#x5B57;&#x51B2;&#x7A81;&#x95EE;&#x9898;,&#x7EC4;&#x5408;&#x5185;&#x5916;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x540D;&#x5B57;&#x91CD;&#x590D;&#x95EE;&#x9898;&#xFF0C;&#x53EA;&#x4F1A;&#x8BBF;&#x95EE;&#x5230;&#x6700;&#x5916;&#x5C42;&#xFF0C;&#x5185;&#x5C42;&#x4F1A;&#x88AB;&#x9690;&#x85CF;&#xFF0C;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x5373;&#x7C7B;&#x4F3C;java&#x4E2D;&#x65B9;&#x6CD5;&#x8986;&#x76D6;/&#x91CD;&#x5199;&#x3002;</span>
+<span class="token keyword">type</span> X <span class="token keyword">struct</span><span class="token punctuation">{</span>
+  Name <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">type</span> Y <span class="token keyword">struct</span><span class="token punctuation">{</span>
+  X             <span class="token comment">//Y.X.Name&#x4F1A;&#x88AB;&#x9690;&#x85CF;&#xFF0C;&#x5185;&#x5C42;&#x4F1A;&#x88AB;&#x9690;&#x85CF;</span>
+  Name <span class="token builtin">string</span>   <span class="token comment">//&#x53EA;&#x4F1A;&#x8BBF;&#x95EE;&#x5230;Y.Name&#xFF0C;&#x53EA;&#x4F1A;&#x8C03;&#x7528;&#x5916;&#x5C42;&#x5C5E;&#x6027;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="7-&#x53EF;&#x89C1;&#x6027;&#x5C01;&#x88C5;">7. &#x53EF;&#x89C1;&#x6027;[&#x5C01;&#x88C5;]</h2>
 <p>&#x5C01;&#x88C5;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x628A;&#x5BA2;&#x89C2;&#x4E8B;&#x7269;&#x5C01;&#x88C5;&#x6210;&#x62BD;&#x8C61;&#x7684;&#x7C7B;&#xFF0C;&#x5E76;&#x4E14;&#x7C7B;&#x53EF;&#x4EE5;&#x628A;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;&#x53EA;&#x8BA9;&#x53EF;&#x4FE1;&#x7684;&#x7C7B;&#x6216;&#x8005;&#x5BF9;&#x8C61;&#x64CD;&#x4F5C;&#xFF0C;&#x5BF9;&#x4E0D;&#x53EF;&#x4FE1;&#x7684;&#x8FDB;&#x884C;&#x4FE1;&#x606F;&#x9690;&#x85CF;&#x3002;</p>
 <p><strong>&#x5C01;&#x88C5;&#x7684;&#x672C;&#x8D28;&#x6216;&#x76EE;&#x7684;&#x5176;&#x5B9E;&#x7A0B;&#x5E8F;&#x5BF9;&#x4FE1;&#x606F;(&#x6570;&#x636E;)&#x7684;&#x63A7;&#x5236;&#x529B;&#x3002;&#x5C01;&#x88C5;&#x5206;&#x4E3A;&#x4E24;&#x90E8;&#x5206;&#xFF1A;&#x8BE5;&#x9690;&#x85CF;&#x7684;&#x9690;&#x85CF;&#xFF0C;&#x8BE5;&#x66B4;&#x9732;&#x7684;&#x66B4;&#x9732;&#x3002;&#x5C01;&#x88C5;&#x53EF;&#x4EE5;&#x9690;&#x85CF;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#xFF0C;&#x4F7F;&#x5F97;&#x4EE3;&#x7801;&#x6A21;&#x5757;&#x5316;&#x3002;</strong></p>
 <p>Go&#x4E2D;&#x7528;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#x6765;&#x8868;&#x793A;public&#xFF0C;&#x53EF;&#x4EE5;&#x5305;&#x5916;&#x8BBF;&#x95EE;&#xFF1B;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#x6765;&#x8868;&#x793A;private&#xFF0C;&#x53EA;&#x80FD;&#x5305;&#x5185;&#x8BBF;&#x95EE;&#xFF1B;&#x8BBF;&#x95EE;&#x6027;&#x662F;&#x5305;&#x7EA7;&#x522B;&#x975E;&#x7C7B;&#x578B;&#x7EA7;&#x522B;,&#x5982;&#x679C;&#x53EF;&#x8BBF;&#x95EE;&#x6027;&#x662F;&#x7C7B;&#x578B;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;friend&#x5173;&#x952E;&#x5B57;&#x8868;&#x793A;&#x670B;&#x53CB;&#x5173;&#x7CFB;&#x53EF;&#x4E92;&#x76F8;&#x8BBF;&#x95EE;&#x5F7C;&#x6B64;&#x7684;&#x79C1;&#x6709;&#x6210;&#x5458;(&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;)</p>
-<pre><code class="lang-go"><span class="hljs-keyword">type</span> Rect <span class="hljs-keyword">struct</span>{
-  X,Y <span class="hljs-keyword">float64</span>
-  Width,Height <span class="hljs-keyword">float64</span>           <span class="hljs-comment">//&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x5F00;&#x5934;&#x8868;&#x793A;&#x8BE5;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x7531;&#x5305;&#x5916;&#x8BBF;&#x95EE;&#x5230;</span>
-}
-<span class="hljs-keyword">func</span> (r *Rect) area() <span class="hljs-keyword">float64</span>{   <span class="hljs-comment">//&#x5B57;&#x6BCD;&#x5C0F;&#x5199;&#x5F00;&#x5934;&#x8868;&#x793A;&#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x5305;&#x5185;&#x8C03;&#x7528;</span>
-  <span class="hljs-keyword">return</span> r.Width*r.Height
-}
+<pre class="language-"><code class="lang-go"><span class="token keyword">type</span> Rect <span class="token keyword">struct</span><span class="token punctuation">{</span>
+  X<span class="token punctuation">,</span>Y <span class="token builtin">float64</span>
+  Width<span class="token punctuation">,</span>Height <span class="token builtin">float64</span>           <span class="token comment">//&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x5F00;&#x5934;&#x8868;&#x793A;&#x8BE5;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x7531;&#x5305;&#x5916;&#x8BBF;&#x95EE;&#x5230;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>r <span class="token operator">*</span>Rect<span class="token punctuation">)</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">float64</span><span class="token punctuation">{</span>   <span class="token comment">//&#x5B57;&#x6BCD;&#x5C0F;&#x5199;&#x5F00;&#x5934;&#x8868;&#x793A;&#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x5305;&#x5185;&#x8C03;&#x7528;</span>
+  <span class="token keyword">return</span> r<span class="token punctuation">.</span>Width<span class="token operator">*</span>r<span class="token punctuation">.</span>Height
+<span class="token punctuation">}</span>
 </code></pre>
-
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; www.huweihuang.com 2017-2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Updated at 
+2018-08-19 18:06:21
+</span></footer>
                                 
                                 </section>
                             
@@ -590,7 +683,7 @@ rect4:=&amp;Rect{width:<span class="hljs-number">100</span>,height:<span class="
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.2. 方法","level":"1.4.2","depth":2,"next":{"title":"3.3. 接口","level":"1.4.3","depth":2,"path":"oop/interface.md","ref":"oop/interface.md","articles":[]},"previous":{"title":"3.1. 概述","level":"1.4.1","depth":2,"path":"oop/oop.md","ref":"oop/oop.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"oop/method.md","mtime":"2018-08-19T10:06:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-19T10:11:49.966Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.2. 方法","level":"1.4.2","depth":2,"next":{"title":"3.3. 接口","level":"1.4.3","depth":2,"path":"oop/interface.md","ref":"oop/interface.md","articles":[]},"previous":{"title":"3.1. 概述","level":"1.4.1","depth":2,"path":"oop/oop.md","ref":"oop/oop.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","ga"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © www.huweihuang.com 2017-2018","modify_label":"Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/huweihuang"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/huweihuang/golang-notes/blob/master/"},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"https://www.huweihuang.com/golang-notes/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"huweihuang/golang-notes","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"e146d71b77957235bba1e709d930f62e"},"ga":{"configuration":"auto","token":"UA-114718458-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"胡伟煌","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"basis/data-types.html#fig1.3.2.1","level":"1.3.2","list_caption":"Figure: 这里写图片描述","alt":"这里写图片描述","nro":1,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578663/article/golang/basics/bit-operation.png","index":1,"caption_template":"图片 - _CAPTION_","label":"这里写图片描述","attributes":{},"skip":false,"key":"1.3.2.1"},{"backlink":"basis/data-types.html#fig1.3.2.2","level":"1.3.2","list_caption":"Figure: 这里写图片描述","alt":"这里写图片描述","nro":2,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578664/article/golang/basics/string.png","index":2,"caption_template":"图片 - _CAPTION_","label":"这里写图片描述","attributes":{},"skip":false,"key":"1.3.2.2"},{"backlink":"oop/pointer.html#fig1.4.4.1","level":"1.4.4","list_caption":"Figure: 什么是变量","alt":"什么是变量","nro":3,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/var1.png","index":1,"caption_template":"图片 - _CAPTION_","label":"什么是变量","attributes":{},"skip":false,"key":"1.4.4.1"},{"backlink":"oop/pointer.html#fig1.4.4.2","level":"1.4.4","list_caption":"Figure: 什么是变量2","alt":"什么是变量2","nro":4,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/var2.png","index":2,"caption_template":"图片 - _CAPTION_","label":"什么是变量2","attributes":{},"skip":false,"key":"1.4.4.2"},{"backlink":"oop/pointer.html#fig1.4.4.3","level":"1.4.4","list_caption":"Figure: 什么是指针","alt":"什么是指针","nro":5,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578751/article/golang/pointer/pointer1.png","index":3,"caption_template":"图片 - _CAPTION_","label":"什么是指针","attributes":{},"skip":false,"key":"1.4.4.3"},{"backlink":"oop/pointer.html#fig1.4.4.4","level":"1.4.4","list_caption":"Figure: 什么是指针2","alt":"什么是指针2","nro":6,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578751/article/golang/pointer/pointer2.png","index":4,"caption_template":"图片 - _CAPTION_","label":"什么是指针2","attributes":{},"skip":false,"key":"1.4.4.4"},{"backlink":"oop/pointer.html#fig1.4.4.5","level":"1.4.4","list_caption":"Figure: 什么是指针3","alt":"什么是指针3","nro":7,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/pointer3.png","index":5,"caption_template":"图片 - _CAPTION_","label":"什么是指针3","attributes":{},"skip":false,"key":"1.4.4.5"},{"backlink":"oop/pointer.html#fig1.4.4.6","level":"1.4.4","list_caption":"Figure: 什么是指针4","alt":"什么是指针4","nro":8,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/pointer4.png","index":6,"caption_template":"图片 - _CAPTION_","label":"什么是指针4","attributes":{},"skip":false,"key":"1.4.4.6"}]},"title":"Golang 学习笔记","language":"zh-hans","links":{"sidebar":{"胡伟煌":"https://www.huweihuang.com"}},"gitbook":"*","description":"Golang 学习笔记"},"file":{"path":"oop/method.md","mtime":"2018-08-19T10:06:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-21T13:06:03.342Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -600,19 +693,43 @@ rect4:=&amp;Rect{width:<span class="hljs-number">100</span>,height:<span class="
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
