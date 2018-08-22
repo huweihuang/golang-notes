@@ -1,6 +1,6 @@
 ## 1. install-go.sh
 
-```shell
+```bash
 #!/bin/bash
 # for linux
 set -x
@@ -32,7 +32,7 @@ mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 
 ## 2. 安装
 
-```shell
+```bash
 chmod +x install-go.sh
 ./install-go.sh 1.10.3
 ```
