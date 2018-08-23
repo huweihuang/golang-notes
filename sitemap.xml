@@ -24,5 +24,8 @@
 <url> <loc>https://www.huweihuang.com/golang-notes/text/string.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/golang-notes/text/template.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/golang-notes/test/test.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://www.huweihuang.com/golang-notes/test/gbd.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/golang-notes/test/gdb.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/golang-notes/web/beego/beego-introduction.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/golang-notes/web/beego/beego-log.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/golang-notes/web/golang-http-execution-flow.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
