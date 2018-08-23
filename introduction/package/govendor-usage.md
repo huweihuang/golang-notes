@@ -1,18 +1,18 @@
-## 1. govendor简介
+# 1. govendor简介
 
 golang工程的依赖包经常使用go get 的方式来获取，例如：go get github.com/kardianos/govendor ，会将依赖包下载到GOPATH的路径下。
 
 常用的依赖包管理工具有godep，govendor等，在Golang1.5之后，Go提供了 `GO15VENDOREXPERIMENT` 环境变量，用于将go build时的应用路径搜索调整成为 `当前项目目录/vendor` 目录方式。通过这种形式，我们可以实现类似于 `godep` 方式的项目依赖管理。
 
-## 2. 安装与使用
+# 2. 安装与使用
 
-### 2.1. 安装
+## 2.1. 安装
 
 ```go
 go get -u -v github.com/kardianos/govendor
 ```
 
-### 2.2. 使用
+## 2.2. 使用
 
 ```bash
 #进入到项目目录
@@ -32,11 +32,11 @@ govendor add +external
 export GO15VENDOREXPERIMENT=1
 ```
 
-### 2.3. 说明
+## 2.3. 说明
 
 govendor只是用来管理项目的依赖包，如果GOPATH中本身没有项目的依赖包，则需要通过go get先下载到GOPATH中，再通过govendor add +external 拷贝到vendor目录中。
 
-## 3. govendor的配置文件
+# 3. govendor的配置文件
 
 `vendor.json`记录依赖包列表。
 
@@ -56,7 +56,7 @@ govendor只是用来管理项目的依赖包，如果GOPATH中本身没有项目
 }
 ```
 
-## 4. govendor使用命令
+# 4. govendor使用命令
 
 ```bash
 [root@CC54425A mytool]# govendor

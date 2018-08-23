@@ -4,7 +4,7 @@
 
 * [Golang介绍]()
     * [Golang介绍](introduction/golang.md)
-    * [Goalng安装](introduction/install.md)
+    * [Golang安装](introduction/install.md)
     * [包管理工具]()
         * [govendor的使用](introduction/package/govendor-usage.md)
         * [dep的使用](introduction/package/dep-usage.md)
@@ -38,4 +38,3 @@
         * [Beego 介绍](web/beego/beego-introduction.md)
         * [Beego 日志处理](web/beego/beego-log.md)
     * [Http包源码分析](web/golang-http-execution-flow.md)
-  

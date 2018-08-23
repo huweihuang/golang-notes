@@ -7,7 +7,7 @@
 
 * [Golang介绍]()
     * [Golang介绍](introduction/golang.md)
-    * [Goalng安装](introduction/install.md)
+    * [Golang安装](introduction/install.md)
     * [包管理工具]()
         * [govendor的使用](introduction/package/govendor-usage.md)
         * [dep的使用](introduction/package/dep-usage.md)

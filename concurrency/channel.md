@@ -1,10 +1,10 @@
-## Channel
+# Channel
 
 channel就像管道的形式，是goroutine之间的通信方式，是进程内的通信方式，跨进程通信建议用分布式系统的方法来解决，例如Socket或http等通信协议。channel是类型相关，即一个channel只能传递一种类型的值，在声明时指定。
 
-### 1. 基本语法
+## 1. 基本语法
 
-#### 1.1. channel的声明
+## 1.1. channel的声明
 
 ```go
 //1、channel声明，声明一个管道chanName，该管道可以传递的类型是ElementType
@@ -14,13 +14,13 @@ var ch chan int                  //声明一个可以传递int类型的管道
 var m map[string] chan bool      //声明一个map，值的类型为可以传递bool类型的管道
 ```
 
-#### 1.2. 初始化
+## 1.2. 初始化
 
 ```go
 //2、初始化ch:=make(chan int)   //make一般用来声明一个复合类型，参数为复合类型的属性
 ```
 
-#### 1.3. 管道读写
+## 1.3. 管道读写
 
 ```go
 //3、管道写入,把值想象成一个球，"<-"的方向，表示球的流向，ch即为管道
@@ -31,7 +31,7 @@ ch <- value
 value:= <-ch 
 ```
 
-#### 1.4. select
+## 1.4. select
 
 ```go
 //4、每个case必须是一个IO操作，面向channel的操作，只执行其中的一个case操作，一旦满足则结束select过程
@@ -46,9 +46,9 @@ select{
 }
 ```
 
-### 2. 缓冲和超时机制
+## 2. 缓冲和超时机制
 
-#### 2.1. 缓冲机制
+## 2.1. 缓冲机制
 
 ```go
 //1、缓冲机制：为管道指定空间长度，达到类似消息队列的效果
@@ -59,7 +59,7 @@ for i :=range c{
 }
 ```
 
-#### 2.2. 超时机制
+## 2.2. 超时机制
 
 ```go
 //2、超时机制：利用select只要一个case满足，程序就继续执行而不考虑其他case的情况的特性实现超时机制
@@ -77,7 +77,7 @@ select {
 }
 ```
 
-### 2.3. channel的传递
+## 2.3. channel的传递
 
 ```go
 //1、channel的传递，来实现Linux系统中管道的功能，以插件的方式增加数据处理的流程
@@ -93,7 +93,7 @@ func handler(queue chan *PipeData){ //queue是一个存放*PipeDate类型的管�
 }
 ```
 
-### 2.4. 单向channel
+## 2.4. 单向channel
 
 ```go
 //2、单向channel：只能用于接收或发送数据，是对channel的一种使用限制
@@ -112,7 +112,7 @@ func Parse(ch <-chan int){    //最小权限原则
 }
 ```
 
-### 2.5. 关闭channel
+## 2.5. 关闭channel
 
 ```go
 //3、关闭channel，使用内置函数close()函数即可

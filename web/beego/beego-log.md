@@ -1,4 +1,4 @@
-## 1. 使用入门
+# 1. 使用入门
 
 beego 的日志处理是基于 logs 模块搭建的，内置了一个变量 `BeeLogger`，默认已经是 `logs.BeeLogger` 类型，初始化了 console，也就是默认输出到 `console。`
 
@@ -13,7 +13,7 @@ beego.Informational("this is informational")
 beego.Debug("this is debug")
 ```
 
-## 2. 设置输出
+# 2. 设置输出
 
 我们的程序往往期望把信息输出到 log 中，现在设置输出到文件很方便，如下所示：
 
@@ -27,7 +27,7 @@ beego.SetLogger("file", `{"filename":"logs/test.log"}`)
 beego.BeeLogger.DelLogger("console")
 ```
 
-## 3. 设置级别
+# 3. 设置级别
 
 ```go
 LevelEmergency
@@ -46,7 +46,7 @@ LevelDebug
 beego.SetLevel(beego.LevelInformational)
 ```
 
-## 4. 输出文件名和行号
+# 4. 输出文件名和行号
 
 日志默认不输出调用的文件名和文件行号,如果你期望输出调用的文件名和文件行号,可以如下设置
 
@@ -56,7 +56,7 @@ beego.SetLogFuncCall(true)
 
 开启传入参数 true, 关闭传入参数 false, 默认是关闭的。
 
-## 5. beego/logs模块的使用
+# 5. beego/logs模块的使用
 
 是一个用来处理日志的库，目前支持的引擎有 file、console、net、smtp，可以通过如下方式进行安装：
 
@@ -64,7 +64,7 @@ beego.SetLogFuncCall(true)
 go get github.com/astaxie/beego/logs
 ```
 
-### 5.1. 通用方式
+## 5.1. 通用方式
 
 首先引入包：
 
@@ -108,7 +108,7 @@ func main() {
 }
 ```
 
-### 5.2. 输出文件名和行号
+## 5.2. 输出文件名和行号
 
 日志默认不输出调用的文件名和文件行号,如果你期望输出调用的文件名和文件行号,可以如下设置
 
@@ -124,7 +124,7 @@ logs.EnableFuncCallDepth(true)
 logs.SetLogFuncCallDepth(3)
 ```
 
-### 5.3. 异步输出日志
+## 5.3. 异步输出日志
 
 为了提升性能, 可以设置异步输出:
 
@@ -138,7 +138,7 @@ logs.Async()
 logs.Async(1e3)
 ```
 
-### 5.4. 引擎配置
+## 5.4. 引擎配置
 
 - console
 

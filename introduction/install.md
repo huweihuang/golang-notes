@@ -1,4 +1,4 @@
-## 1. install-go.sh
+# 1. install-go.sh
 
 ```bash
 #!/bin/bash
@@ -30,7 +30,7 @@ source $HOME/.bashrc
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 ```
 
-## 2. 安装
+# 2. 安装
 
 ```bash
 chmod +x install-go.sh

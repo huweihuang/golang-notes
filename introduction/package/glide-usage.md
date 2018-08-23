@@ -1,14 +1,14 @@
-## 1. glide简介
+# 1. glide简介
 
 glide是一个golang项目的包管理工具，非常方便快捷，一般只需要2-3个命令就可以将go依赖包自动下载并归档到vendor的目录中。
 
-## 2. glide安装
+# 2. glide安装
 
 ```bash
 go get github.com/Masterminds/glide
 ```
 
-## 3. glide使用
+# 3. glide使用
 
 ```bash
 #进入到项目目录
@@ -19,7 +19,7 @@ glide init
 glide up -v
 ```
 
-## 4. glide的配置文件
+# 4. glide的配置文件
 
 `glide.yaml`记录依赖包列表。
 
@@ -35,7 +35,7 @@ testImport:
   - convey
 ```
 
-## 5. glide-help
+# 5. glide-help
 
 更多glide的命令帮助参考`glide —help`。
 

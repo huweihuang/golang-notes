@@ -1,10 +1,10 @@
-## JSON处理
+# JSON处理
 
 JSON是一种轻量级的数据交换语言。
 
-### 1. 解析JSON[Unmarshal(data []byte, v interface{})]
+## 1. 解析JSON[Unmarshal(data []byte, v interface{})]
 
-#### 1.1. Unmarshal源码
+## 1.1. Unmarshal源码
 
 **/src/encoding/json/decode.go**
 
@@ -43,7 +43,7 @@ func (d *decodeState) unmarshal(v interface{}) (err error) {
 }
 ```
 
-#### 1.2. 解析到结构体
+## 1.2. 解析到结构体
 
 ```go
 package main
@@ -79,13 +79,13 @@ JSON格式与结构体一一对应，Unmarshal方法即将JSON文本转换成结
 2. 其次查找字段名为Foo的可导出字段。
 3. 最后查找类似FOO或者FoO这类除首字母外，其他大小写不敏感的可导出字段。
 
-#### 1.3. 解析到interface
+## 1.3. 解析到interface
 
  
 
-### 2. 生成JSON[Marshal(v interface{})]
+## 2. 生成JSON[Marshal(v interface{})]
 
-#### 2.1. Marshal源码
+## 2.1. Marshal源码
 
 **/src/encoding/json/encode.go**
 
@@ -116,7 +116,7 @@ func (e *encodeState) marshal(v interface{}) (err error) {
 }
 ```
 
-#### 2.2. 使用方法
+## 2.2. 使用方法
 
 ```go
 package main
@@ -143,7 +143,7 @@ func main() {
 }
 ```
 
-#### 2.3. 说明
+## 2.3. 说明
 
 Marshal方法将结构体转换成json文本，匹配规则如下：
 

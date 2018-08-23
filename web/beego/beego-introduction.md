@@ -1,12 +1,12 @@
-## 1. beego的使用
+# 1. beego的使用
 
-### 1.1. beego的安装
+## 1.1. beego的安装
 
 ```go
 go get github.com/astaxie/beego
 ```
 
-### 1.2. beego的升级
+## 1.2. beego的升级
 
 1、直接升级
 
@@ -22,7 +22,7 @@ go get -u github.com/astaxie/beego
 go install  github.com/astaxie/beego
 ```
 
-### 1.3. bee工具
+## 1.3. bee工具
 
 bee工具用来进行beego项目的创建、热编译、开发、测试、和部署。
 
@@ -36,7 +36,7 @@ go get github.com/beego/bee
 
 安装完之后，`bee`可执行文件默认存放在`$GOPATH/bin`里面，所以要把`$GOPATH/bin`添加到环境变量中。
 
-### 1.4. bee命令
+## 1.4. bee命令
 
 ```bash
 Bee is a tool for managing beego framework.
@@ -59,7 +59,7 @@ The commands are:
 
 说明：
 
-#### 1.4.1. new
+## 1.4.1. new
 
 在 `$GOPATH/src`的目录下执行`bee new <appname>`，会在当前目录下生成以下文件：
 
@@ -83,11 +83,11 @@ myproject
     └── index.tpl
 ```
 
-#### 1.4.2. run
+## 1.4.2. run
 
 必须在`$GOPATH/src/appname`下执行bee run，默认监听8080端口：`http://localhost:8080/。`
 
-#### 1.4.3. api
+## 1.4.3. api
 
 `api` 命令就是用来创建 API 应用，生成以下文件：和 Web 项目相比，少了 static 和 views 目录，多了一个 test 模块，用来做单元测试。
 
@@ -110,23 +110,23 @@ apiproject
     └── default_test.go
 ```
 
-#### 1.4.4. pack
+## 1.4.4. pack
 
 `pack` 目录用来发布应用的时候打包，会把项目打包成 zip 包(`apiproject.tar.gz`)，这样我们部署的时候直接把打包之后的项目上传，解压就可以部署了：
 
-#### 1.4.5. generate
+## 1.4.5. generate
 
 用来自动化的生成代码的，包含了从数据库一键生成model，还包含了scaffold。
 
-#### 1.4.6. migrate
+## 1.4.6. migrate
 
 这个命令是应用的数据库迁移命令，主要是用来每次应用升级，降级的SQL管理。
 
-## 2. beego的架构
+# 2. beego的架构
 
 beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开发 API、Web 及后端服务等各种应用，是一个 RESTful 的框架。
 
-### 2.1. beego架构图
+## 2.1. beego架构图
 
 ![architecture](https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578706/article/golang/beego/architecture.png)
 
@@ -134,17 +134,17 @@ beego 是基于八大独立的模块构建的，是一个高度解耦的框架�
 
 可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。
 
-### 2.2. beego执行逻辑
+## 2.2. beego执行逻辑
 
 ![flow](https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578706/article/golang/beego/flow.png)
 
 文件结构见第一部分：[new]。
 
-## 3. beego项目逻辑
+# 3. beego项目逻辑
 
-### 3.1. 路由设置
+## 3.1. 路由设置
 
-#### 3.1.1. beego.Router
+## 3.1.1. beego.Router
 
 入口文件main.go
 
@@ -182,7 +182,7 @@ func init() {
 
 路由包里执行了路由注册`beego.Router`, 这个函数的功能是映射URL到controller，第一个参数是URL(用户请求的地址)，这里是 `/`，也就是访问的不带任何参数的URL，第二个参数是对应的 Controller，就是把请求分发到那个控制器来执行相应的逻辑。
 
-#### 3.1.2. beego.Run
+## 3.1.2. beego.Run
 
 - 解析配置文件
 
@@ -212,7 +212,7 @@ func init() {
 
   这是最后一步也就是我们看到的访问 8080 看到的网页端口，内部其实调用了 `ListenAndServe`，充分利用了 goroutine 的优势，一旦 run 起来之后，我们的服务就监听在两个端口了，一个服务端口 8080 作为对外服务，另一个 8088 端口实行对内监控。
 
-### 3.2. controller 逻辑
+## 3.2. controller 逻辑
 
 ```go
 package controllers
@@ -248,7 +248,7 @@ func (this *MainController) Get() {
 }
 ```
 
-### 3.3. model逻辑
+## 3.3. model逻辑
 
 model一般用来处理数据库操作，如果逻辑中存在可以复用的部分就可以抽象成一个model。
 
@@ -282,7 +282,7 @@ func LogPV(urls string) bool {
 }
 ```
 
-### 3.4. view逻辑
+## 3.4. view逻辑
 
 `Controller中的this.TplName = "index.tpl"`，设置显示的模板文件，默认支持 `tpl` 和 `html` 的后缀名，如果想设置其他后缀你可以调用 `beego.AddTemplateExt` 接口设置。beego 采用了 Go 语言默认的模板引擎，和 Go 的模板语法一样。
 
@@ -318,7 +318,7 @@ func LogPV(urls string) bool {
 
 Controller 里面把数据赋值给了 data（map 类型），然后在模板中就直接通过 key 访问 `.Website` 和 `.Email` 。这样就做到了数据的输出。
 
-### 3.5. 静态文件
+## 3.5. 静态文件
 
 网页往往包含了很多的静态文件，包括图片、JS、CSS 等
 

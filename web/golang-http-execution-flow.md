@@ -1,4 +1,4 @@
-## 1. http包建立web服务器
+# 1. http包建立web服务器
 
 ```go
 package main
@@ -29,7 +29,7 @@ func main() {
 }
 ```
 
-## 2. http包的运行机制
+# 2. http包的运行机制
 
 相关源码位于：/src/net/http/server.go
 
@@ -46,11 +46,11 @@ func main() {
 2. Listen Socket接受客户端的请求，得到Client Socket，接下来通过Client Socket与客户端通信。
 3. 处理客户端请求，首先从Client Socket读取HTTP请求的协议头，如果是POST方法，还可能要读取客户端提交的数据，然后交给相应的handler处理请求，handler处理完，将数据通过Client Socket返回给客户端。
 
-### 2.1. http包执行流程图
+## 2.1. http包执行流程图
 
 ![image2017-3-5 22-46-35](https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578729/article/golang/http/http-flow.png)
 
-### 2.2. 注册路由[HandleFunc]
+## 2.2. 注册路由[HandleFunc]
 
 http.HandlerFunc类型默认实现了ServeHTTP的接口。
 
@@ -126,7 +126,7 @@ func (mux *ServeMux) Handle(pattern string, handler Handler) {
 }
 ```
 
-### 2.3. 如何监听端口
+## 2.3. 如何监听端口
 
 通过ListenAndServe来监听，底层实现：初始化一个server对象，调用net.Listen("tcp",addr)，也就是底层用TCP协议搭建了一个服务，监听设置的端口。然后调用srv.Serve(net.Listener)函数，这个函数处理接收客户端的请求信息。这个函数里起了一个for循环，通过Listener接收请求，创建conn，开一个goroutine，把请求的数据当作参数给conn去服务：go c.serve()，即每次请求都是在新的goroutine中去服务，利于高并发。
 
@@ -157,7 +157,7 @@ func (srv *Server) ListenAndServe() error {
 }
 ```
 
-### 2.4. 如何接收客户端的请求
+## 2.4. 如何接收客户端的请求
 
 srv.Serve
 
@@ -225,11 +225,11 @@ func (srv *Server) newConn(rwc net.Conn) *conn {
 }
 ```
 
-### 2.5. 如何分配handler
+## 2.5. 如何分配handler
 
 conn先解析request：c.readRequest()，获取相应的handler:handler:=c.server.Handler，即ListenAndServe的第二个参数，因为值为nil，所以默认handler=DefaultServeMux。该变量是一个路由器，用来匹配url跳转到其相应的handle函数。其中http.HandleFunc("/",sayhelloName)即注册了请求“/”的路由规则，当uri为“/”时，路由跳转到函数sayhelloName。DefaultServeMux会调用ServeHTTP方法，这个方法内部调用sayhelloName本身，最后写入response的信息反馈给客户端。
 
-#### 2.5.1. c.serve()
+## 2.5.1. c.serve()
 
 ```go
 // Serve a new connection.
@@ -244,7 +244,7 @@ func (c *conn) serve() {
 }
 ```
 
-#### 2.5.2. c.readRequest()
+## 2.5.2. c.readRequest()
 
 ```go
 // Read next request from connection.
@@ -321,7 +321,7 @@ func (c *conn) readRequest() (w *response, err error) {
 }
 ```
 
-#### 2.5.3. ServeHTTP(w, w.req)
+## 2.5.3. ServeHTTP(w, w.req)
 
 ```go
 func (sh serverHandler) ServeHTTP(rw ResponseWriter, req *Request) {
@@ -336,7 +336,7 @@ func (sh serverHandler) ServeHTTP(rw ResponseWriter, req *Request) {
 }
 ```
 
-#### 2.5.4. DefaultServeMux
+## 2.5.4. DefaultServeMux
 
 ```go
 type ServeMux struct {
@@ -363,7 +363,7 @@ type Handler interface {
 }
 ```
 
-#### 2.5.5. ServeMux.ServeHTTP
+## 2.5.5. ServeMux.ServeHTTP
 
 ```go
 // ServeHTTP dispatches the request to the handler whose
@@ -429,11 +429,11 @@ func (mux *ServeMux) handler(host, path string) (h Handler, pattern string) {
 }
 ```
 
-### 2.6. http连接处理流程图
+## 2.6. http连接处理流程图
 
 ![image2017-3-5 23-50-6](https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578730/article/golang/http/http-connect-flow.png)
 
-## 3. http的执行流程总结
+# 3. http的执行流程总结
 
 1、首先调用Http.HandleFunc，按如下顺序执行：
 
@@ -459,7 +459,7 @@ func (mux *ServeMux) handler(host, path string) (h Handler, pattern string) {
 - 如果有路由满足，调用这个路由handler的ServeHttp。
 - 如果没有路由满足，调用NotFoundHandler的ServeHttp。
 
-## 4. 自定义路由
+# 4. 自定义路由
 
 Go支持外部实现路由器，ListenAndServe的第二个参数就是配置外部路由器，它是一个Handler接口。即外部路由器实现Hanlder接口。
 

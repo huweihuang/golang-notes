@@ -1,4 +1,4 @@
-## 1. 接口[多态]
+# 1. 接口[多态]
 
 ​多态性（polymorphisn）是允许你将父对象设置成为和一个或更多的他的子对象相等的技术，赋值之后，父对象就可以根据当前赋值给它的子对象的特性以不同的方式运作。
 
@@ -6,7 +6,7 @@
 
  即一个引用变量倒底会指向哪个类的实例对象，该引用变量发出的方法调用到底是哪个类中实现的方法，必须在由程序运行期间才能决定。不修改程序代码就可以改变程序运行时所绑定的具体代码，让程序可以选择多个运行状态，这就是多态性。多态分为编译时多态（静态多态）和运行时多态（动态多态），编译时多态一般通过方法重载实现，运行时多态一般通过方法重写实现。
 
-### 1.1 接口概念
+## 1.1 接口概念
 
 >接口类型可以看作是类型系统中一种特殊的类型，而实例就是实现了该接口的具体结构体类型。
 >
@@ -28,7 +28,7 @@
 
 ​      当其他设计者调用了接口后，就不能再随意更改接口的定义，否则项目开发者事先的约定就失去了意义。但是可以在类中修改相应的代码，完成需要改动的内容。 
 
-### 1.2 非侵入式接口
+## 1.2 非侵入式接口
 
 非侵入式接口：一个类只需要实现了接口要求的所有函数就表示实现了该接口，并不需要显式声明
 
@@ -57,7 +57,7 @@ var file1 IFile = new(File)
 var file2 IReader = new(File)
 ```
 
-### 1.3 接口赋值
+## 1.3 接口赋值
 
 只要类实现了该接口的所有方法，即可将该类赋值给这个接口，接口主要用于多态化方法。即对接口定义的方法，不同的实现方式。
 
@@ -103,7 +103,7 @@ var file1 ReadWriter=new(File)   //子接口实例
 var file2 Writer=file1           //子接口实例赋值给父接口
 ```
 
-### 1.4 接口查询
+## 1.4 接口查询
 
 若要在 switch 外判断一个接口类型是否实现了某个接口，可以使用“逗号 ok ”。
 
@@ -119,7 +119,7 @@ if file5,ok:=file1.(File);ok{
 }
 ```
 
-### 1.5 接口类型查询
+## 1.5 接口类型查询
 
 在 Go 中，要判断传递给接口值的变量类型，可以在使用 type switch 得到。(type)只能在 switch 中使用。
 
@@ -140,7 +140,7 @@ func f(p I) {
 }
 ```
 
-### 1.6 接口组合
+## 1.6 接口组合
 
 ```go
 //接口组合类似类型组合，只不过只包含方法，不包含成员变量
@@ -150,7 +150,7 @@ type ReadWriter interface{  //接口组合，避免代码重复
 }
 ```
 
-### 1.7 Any类型[空接口]
+## 1.7 Any类型[空接口]
 
 每种类型都能匹配到空接口：interface{}。空接口类型对方法没有任何约束（因为没有方法），它能包含任意类型，也可以实现到其他接口类型的转换。如果传递给该接口的类型变量实现了转换后的接口则可以正常运行，否则出现运行时错误。
 
@@ -164,7 +164,7 @@ func DoSomething(v interface{}) {   //该函数可以接收任何类型的参数
 }
 ```
 
-### 1.8 接口的代码示例
+## 1.8 接口的代码示例
 
 ```go
 //接口animal
@@ -207,13 +207,13 @@ func main() {
     }
 }
 ```
-## 2. client-go中接口的使用分析
+# 2. client-go中接口的使用分析
 
 以下以`k8s.io/client-go/kubernetes/typed/core/v1/pod.go`的pod对象做分析。
 
-### 2.1 接口设计与定义
+## 2.1 接口设计与定义
 
-#### 2.1.1 接口组合
+## 2.1.1 接口组合
 
 ```go
 // PodsGetter has a method to return a PodInterface.
@@ -223,7 +223,7 @@ type PodsGetter interface {
 }
 ```
 
-#### 2.1.2 接口定义 {#index1}
+## 2.1.2 接口定义 {#index1}
 
 ```go
 // PodInterface has methods to work with Pod resources.
@@ -243,9 +243,9 @@ type PodInterface interface {
 
 `PodInterface`接口定义了pod对象所使用的方法，一般为增删改查等。其他kubernetes资源对象的接口定义类似，区别在于入参和出参与对象相关。例如`Create(*v1.Pod) (*v1.Pod, error)`方法定义的入参出参为`*v1.Pod`。如果要实现该接口，即实现该接口的所有方法。
 
-### 2.2 接口的实现 {#index2}
+## 2.2 接口的实现 {#index2}
 
-#### 2.2.1 结构体的定义
+## 2.2.1 结构体的定义
 
 ```go
 // pods implements PodInterface
@@ -255,7 +255,7 @@ type pods struct {
 }
 ```
 
-#### 2.2.2 new函数[构造函数]
+## 2.2.2 new函数[构造函数]
 
 ```go
 // newPods returns a Pods
@@ -267,7 +267,7 @@ func newPods(c *CoreV1Client, namespace string) *pods {
 }
 ```
 
-#### 2.2.3 方法的实现
+## 2.2.3 方法的实现
 
 **Get**
 
@@ -350,7 +350,7 @@ func (c *pods) Delete(name string, options *meta_v1.DeleteOptions) error {
 }
 ```
 
-### 2.3 接口的调用
+## 2.3 接口的调用
 
 示例：
 
@@ -420,9 +420,9 @@ pods, err := clientset.CoreV1().Pods("").List(metav1.ListOptions{})
 
 即以上代码就是不断调用实现了某接口的结构体对象的构造函数，生成具体的结构体对象，再调用结构体对象的某个具体方法。
 
-## 3. 通用接口设计
+# 3. 通用接口设计
 
-### 3.1 接口定义
+## 3.1 接口定义
 
 ```go
 // ProjectManager manage life cycle of Deployment and Resources
@@ -440,7 +440,7 @@ type PodInterface interface {
 }
 ```
 
-### 3.2 结构体定义
+## 3.2 结构体定义
 
 ```go
 // pods implements PodInterface
@@ -450,7 +450,7 @@ type pods struct {
 }
 ```
 
-### 3.3 构造函数
+## 3.3 构造函数
 
 ```go
 // newPods returns a Pods
@@ -462,7 +462,7 @@ func newPods(c *CoreV1Client, namespace string) *pods {
 }
 ```
 
-### 3.4 结构体实现
+## 3.4 结构体实现
 
 **List()**
 
@@ -480,13 +480,13 @@ func (c *pods) List(opts meta_v1.ListOptions) (result *v1.PodList, err error) {
 }
 ```
 
-### 3.5 接口调用
+## 3.5 接口调用
 
 ```go
 pods, err := clientset.CoreV1().Pods("").List(metav1.ListOptions{})
 ```
 
-### 3.6 其他接口设计示例
+## 3.6 其他接口设计示例
 
 ```go
 type XxxManager interface {

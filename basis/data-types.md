@@ -1,8 +1,8 @@
-## 类型
+# 类型
 
-### 1. 基础类型
+## 1. 基础类型
 
-#### 1.1. 布尔类型
+## 1.1. 布尔类型
 
 ```go
 //布尔类型的关键字为bool,值为true或false，不可写为0或1
@@ -12,7 +12,7 @@ v1=true
 v2:=(1==2)
 ```
 
-#### 1.2. 整型
+## 1.2. 整型
 
  ![这里写图片描述](https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578665/article/golang/basics/int.png)
 
@@ -41,7 +41,7 @@ if i==1 || j==2  //编译通过，可以与字面常量（literal）进行比较
 
 ![这里写图片描述](https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578663/article/golang/basics/bit-operation.png)
 
-#### 1.3. 浮点型
+## 1.3. 浮点型
 
 ```go
 //1、浮点型分为float32(类似C中的float)，float64(类似C中的double)
@@ -53,7 +53,7 @@ f1=float32(f2)  //需要执行强制转换
 //浮点数不是精确的表达方式，不能直接使用“==”来判断是否相等，可以借用math的包math.Fdim 
 ```
 
-#### 1.4. 复数类型
+## 1.4. 复数类型
 
 ```go
 //1、复数的表示
@@ -66,7 +66,7 @@ v3:=complex(3.2,12)
 //z=complex(x,y),通过内置函数实部x=real(z),虚部y=imag(z)
 ```
 
-#### 1.5. 字符串
+## 1.5. 字符串
 
 ```go
 //声明与赋值
@@ -76,18 +76,18 @@ str="hello world"
 
 ![这里写图片描述](https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578664/article/golang/basics/string.png)
 
-#### 1.6. 字符类型
+## 1.6. 字符类型
 
 ```go
 //1、byte，即uint8的别名
 //2、rune，即Unicode
 ```
 
-#### 1.7. 错误类型（error）
+## 1.7. 错误类型（error）
 
-### 2. 复合类型
+## 2. 复合类型
 
-#### 2.1. 数组(array)
+## 2.1. 数组(array)
 
 数组表示同一类型数据，数组长度定义后就不可更改，长度是数组内的一个内置常量，可通过len()来获取。
 
@@ -108,7 +108,7 @@ for i,v:=range array{
 //数组在Go中作为一个值类型，值类型在赋值和函数参数传递时，只复制副本，因此在函数体中并不能改变数组的内容，需用指针来改变数组的值。
 ```
 
-#### 2.2. 切片(slice)
+## 2.2. 切片(slice)
 
 ​	数组在定义了长度后无法改变，且作为值类型在传递时产生副本，并不能改变数组元素的值。因此切片的功能弥补了这个不足，切片类似指向数组的一个指针。可以抽象为三个变量：指向数组的指针；切片中元素的个数(len函数)；已分配的存储空间(cap函数)。
 
@@ -148,7 +148,7 @@ copy(slice2,slice1)   //只会复制slice1的前三个元素到slice2中
 copy(slice1,slice1)   //只会复制slice2的三个元素到slice1中的前三个位置
 ```
 
-#### 2.3. 键值对(map)
+## 2.3. 键值对(map)
 
 map是一堆键值对的未排序集合。
 
@@ -205,14 +205,14 @@ if _, ok := myMap[valueX]; ok {
 }
 ```
 
-#### 2.4. 指针(pointer)
+## 2.4. 指针(pointer)
 具体参考[Go语言指针详解](http://blog.csdn.net/huwh_/article/details/77879970)
 
-#### 2.5. 结构体(struct)
+## 2.5. 结构体(struct)
 具体参考[Go面向对象编程之结构体](http://blog.csdn.net/huwh_/article/details/53710495#t3)
 
-#### 2.6. 接口(interface)
+## 2.6. 接口(interface)
 具体参考[Go面向对象编程之接口](http://blog.csdn.net/huwh_/article/details/53710495#t8)
 
-#### 2.7. 通道(chan)
+## 2.7. 通道(chan)
 具体参考[Go并发编程之channel](http://blog.csdn.net/huwh_/article/details/74858134#t5)

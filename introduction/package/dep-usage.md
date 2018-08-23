@@ -1,14 +1,14 @@
-## 1. dep简介
+# 1. dep简介
 
 `dep`是一个golang项目的包管理工具，一般只需要2-3个命令就可以将go依赖包自动下载并归档到`vendor`的目录中。dep官网参考：https://github.com/golang/dep
 
-## 2. dep安装
+# 2. dep安装
 
 ```bash
 go get -u github.com/golang/dep/cmd/dep
 ```
 
-## 3. dep使用
+# 3. dep使用
 
 ```bash
 #进入到项目目录
@@ -20,7 +20,7 @@ dep ensure
 # 最终会生成vendor目录，Gopkg.toml和Gopkg.lock的文件
 ```
 
-## 4. dep的配置文件
+# 4. dep的配置文件
 
 `Gopkg.toml`记录依赖包列表。
 
@@ -62,7 +62,7 @@ ignored = ["demo"]
   unused-packages = true
 ```
 
-## 5. dep-help
+# 5. dep-help
 
 更多dep的命令帮助参考`dep`。
 
