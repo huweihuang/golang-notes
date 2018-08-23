@@ -62,27 +62,24 @@ GDB是FSF(自由软件基金会)发布的一个强大的类UNIX系统下的程�
 
 info命令用来显示信息，后面有几种参数，我们常用的有如下几种：
 
-- -   `info locals`
+1、 `info locals`
 
-      显示当前执行的程序中的变量值
+显示当前执行的程序中的变量值
 
-  -   `info breakpoints`
+2、 `info breakpoints`
 
-      显示当前设置的断点列表
+显示当前设置的断点列表
 
-  -   `info goroutines`
+3、 `info goroutines`
 
-      显示当前执行的goroutine列表，如下代码所示,带*的表示当前执行的
+显示当前执行的goroutine列表，如下代码所示,带*的表示当前执行的
 
-      ```
-      * 1  running runtime.gosched
-      * 2  syscall runtime.entersyscall
-        3  waiting runtime.gosched
-        4 runnable runtime.gosched
-      ```
-    ```
-
-    ```
+```bash
+* 1  running runtime.gosched
+* 2  syscall runtime.entersyscall
+  3  waiting runtime.gosched
+  4  runnable runtime.gosched
+```
 
 ### 2.6. print
 
@@ -92,7 +89,7 @@ info命令用来显示信息，后面有几种参数，我们常用的有如下�
 
 用来显示当前变量的类型，后面跟上变量名，例如`whatis msg`,显示如下：
 
-```
+```bash
   type = struct string
 ```
 
@@ -141,13 +138,13 @@ func main() {
 
 编译文件，生成可执行文件gdbfile:
 
-```go
+```bash
 go build -gcflags "-N -l" gdbfile.go
 ```
 
 通过gdb命令启动调试：
 
-```go
+```bash
 gdb gdbfile
 ```
 

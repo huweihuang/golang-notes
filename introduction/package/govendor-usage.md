@@ -36,7 +36,27 @@ export GO15VENDOREXPERIMENT=1
 
 govendor只是用来管理项目的依赖包，如果GOPATH中本身没有项目的依赖包，则需要通过go get先下载到GOPATH中，再通过govendor add +external 拷贝到vendor目录中。
 
-## 3. govendor使用命令
+## 3. govendor的配置文件
+
+`vendor.json`记录依赖包列表。
+
+```json
+{
+    "comment": "",
+    "ignore": "test",
+    "package": [
+        {
+            "checksumSHA1": "uGalSICR4r7354vvKuNnh7Y/R/4=",
+            "path": "github.com/urfave/cli",
+            "revision": "b99aa811b4c1dd84cc6bccb8499c82c72098085a",
+            "revisionTime": "2017-08-04T09:34:15Z"
+        }
+    ],
+    "rootPath": "mytool"
+}
+```
+
+## 4. govendor使用命令
 
 ```bash
 [root@CC54425A mytool]# govendor
@@ -87,22 +107,4 @@ Ignoring files with build tags, or excluding packages from being vendored:
     ("foo/bar", …) will be excluded (but package "bar/foo" will not).
     By default the init command adds the "test" tag to the ignore list.
 If using go1.5, ensure GO15VENDOREXPERIMENT=1 is set.
-```
-
-## 4. vendor.json
-
-```json
-{
-    "comment": "",
-    "ignore": "test",
-    "package": [
-        {
-            "checksumSHA1": "uGalSICR4r7354vvKuNnh7Y/R/4=",
-            "path": "github.com/urfave/cli",
-            "revision": "b99aa811b4c1dd84cc6bccb8499c82c72098085a",
-            "revisionTime": "2017-08-04T09:34:15Z"
-        }
-    ],
-    "rootPath": "mytool"
-}
 ```
