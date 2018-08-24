@@ -41,3 +41,9 @@
         * [Beego 介绍](web/beego/beego-introduction.md)
         * [Beego 日志处理](web/beego/beego-log.md)
     * [Http包源码分析](web/golang-http-execution-flow.md)
+
+# 赞赏
+
+> 如果觉得文章有帮助的话，可以打赏一下，谢谢！
+
+<img src="http://ozilwgpje.bkt.clouddn.com/donate/donate.jpg" width="70%"/>
