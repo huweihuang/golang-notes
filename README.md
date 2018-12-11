@@ -45,6 +45,9 @@
         * [Beego 介绍](web/beego/beego-introduction.md)
         * [Beego 日志处理](web/beego/beego-log.md)
     * [Http包源码分析](web/golang-http-execution-flow.md)
+* [源码分析]()
+    * [confd源码分析](code/confd-code-analysis.md)
+
 
 # 赞赏
 
