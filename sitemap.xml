@@ -28,4 +28,5 @@
 <url> <loc>https://www.huweihuang.com/golang-notes/web/beego/beego-introduction.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/golang-notes/web/beego/beego-log.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/golang-notes/web/golang-http-execution-flow.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/golang-notes/code/confd-code-analysis.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
