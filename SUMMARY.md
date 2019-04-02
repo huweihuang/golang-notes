@@ -18,7 +18,7 @@
 * [程序结构](basis/program-structure.md)
 * [基本类型](basis/data-types.md)
 * [流程控制](basis/control-structures.md)
-* [函数](basis/functions.md)
+* [函数与闭包](basis/functions.md)
 * [错误处理](basis/errors.md)
 
 ## 面向对象编程

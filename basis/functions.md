@@ -60,16 +60,88 @@ func (file *File) Read(b []byte) (n int,err error)
 n,_:=f.Read(buf)
 ```
 
-## 4. 匿名函数与闭包
+## 4. 匿名函数
+
+匿名函数：不带函数名的函数，可以像变量一样被传递。
 
 ```go
-//1、匿名函数：不带函数名的函数，可以像变量一样被传递
 func(a,b int,z float32) bool{  //没有函数名
   return a*b<int(z)
 }
 f:=func(x,y int) int{
   return x+y
 }
-
-//2、闭包
 ```
+
+## 5. 闭包
+
+### 5.1. 闭包的概念
+
+闭包是可以包含自由变量（未绑定到特定的对象）的代码块，这些变量不在代码块内或全局上下文中定义，而在定义代码块的环境中定义。要执行的代码块为自由变量提供绑定的计算环境（作用域）。
+
+### 5.2. 闭包的价值
+
+闭包的价值在于可以作为一个变量对象来进行传递和返回。即可以把函数本身看作是一个变量。
+
+### 5.3. Go中的闭包
+
+Go闭包是指引用了函数外的变量的一种函数，这样该函数就被绑定在某个变量上，只要闭包还被使用则引用的变量会一直存在。
+
+Go的匿名函数是一个闭包，Go闭包常用在go和defer关键字中。
+
+### 5.4. 闭包的坑
+
+在for range中goroutine的方式使用闭包，如果没有给匿名函数传入一个变量，或新建一个变量存储迭代的变量，那么goroutine执行的结果会是最后一个迭代变量的结果，而不是每个迭代变量的结果。这是因为如果没有通过一个变量来拷贝迭代变量，那么闭包因为绑定了变量，当每个groutine运行时，迭代变量可能被更改。
+
+示例如下：
+
+```go
+// false, print 3 3 3
+values := []int{1,2,3}
+for _, val := range values {
+	go func() {
+		fmt.Println(val)
+	}()
+}
+// true, print 1 2 3
+for _, val := range values {
+	go func(val interface{}) {
+		fmt.Println(val)
+	}(val)
+}
+```
+
+### 5.5 闭包的示例
+
+> closure.go
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var j int = 5
+	a := func() func() {
+		var i int = 10
+		return func() {
+			fmt.Printf("i, j: %d, %d\n", i, j)
+		}
+	}()
+	a()
+	j *= 2
+	a()
+}
+```
+
+### 5.6 闭包的参考链接
+
+- https://tour.golang.org/moretypes/25
+- https://golang.org/doc/faq#closures_and_goroutines
+- https://github.com/golang/go/wiki/CommonMistakes
+
+参考：
+ 
+- 《Go语言编程》 
