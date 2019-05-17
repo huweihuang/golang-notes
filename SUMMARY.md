@@ -35,6 +35,10 @@
 * [Channel](concurrency/channel.md)
 * [并行化](concurrency/parallelization.md)
 
+## 原理篇
+
+* [Goroutine调度](principle/go-scheduler.md)
+
 ## 文本处理
 
 * [Json处理](text/json.md)
