@@ -68,6 +68,8 @@
 
 * [Beego]()
     * [Beego 介绍](web/beego/beego-introduction.md)
+    * [Bee 工具使用](web/beego/bee.md)
+    * [Beego 项目逻辑](web/beego/beego-project.md)
     * [Beego 日志处理](web/beego/beego-log.md)
 * [Http包源码分析](web/golang-http-execution-flow.md)
 
