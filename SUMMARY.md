@@ -3,6 +3,7 @@
 ## 前言
 
 * [序言](README.md)
+* [Golang资源](introduction/go-resource.md)
 
 ## 安装与配置
 
