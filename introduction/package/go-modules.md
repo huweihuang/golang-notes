@@ -104,7 +104,7 @@ rsc.io/sampler v1.3.0/go.mod h1:T1hPZKmBbMNahiBKFy5HrXp6adAjACjK9JXDnKaTXpA=
 
 ## 3.3. modules.txt
 
-文件路径：/{project}/vondor/modules.txt
+文件路径：/{project}/vendor/modules.txt
 
 ```bash
 # golang.org/x/text v0.0.0-20170915032832-14c0d48ead0c
