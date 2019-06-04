@@ -10,8 +10,9 @@
 * [Golang介绍](introduction/golang.md)
 * [Golang安装](introduction/install.md)
 * [包管理工具]()
-    * [govendor的使用](introduction/package/govendor-usage.md)
+    * [go modules的使用](introduction/package/go-modules.md)
     * [dep的使用](introduction/package/dep-usage.md)
+    * [govendor的使用](introduction/package/govendor-usage.md)
     * [glide的使用](introduction/package/glide-usage.md)
 
 ## 顺序编程

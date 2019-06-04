@@ -30,12 +30,13 @@
 
 - [Go Playground](https://golang.org/play)
 
+- [awesome-go.com](https://awesome-go.com/) 
+
 ## 1.4. [The Go Blog](https://blog.golang.org/index)
 
 - [Share Memory by Communicating](https://golang.org/doc/codewalk/sharemem)
 - [Defer, Panic, and Recover](https://golang.org/blog/defer-panic-and-recover)
 - [Go Slices: usage and internals](https://golang.org/blog/go-slices-usage-and-internals)
-
 - [Profiling Go Programs](https://golang.org/blog/profiling-go-programs)
 
 # 2. 书籍
