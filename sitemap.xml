@@ -31,6 +31,9 @@
 <url> <loc>https://www.huweihuang.com/golang-notes/text/template.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/golang-notes/test/test.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/golang-notes/test/gdb.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/golang-notes/framework/cobra/cobra-usage.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/golang-notes/framework/cobra/cobra-command.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/golang-notes/framework/cobra/cobra-flags.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/golang-notes/web/beego/beego-introduction.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/golang-notes/web/beego/bee.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/golang-notes/web/beego/beego-project.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
