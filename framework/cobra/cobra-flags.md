@@ -22,11 +22,29 @@ localCmd.Flags().StringVarP(&Source, "source", "s", "", "Source directory to rea
 
 ## 3. Local Flag on Parent Commands
 
-> todo
+cobra默认只解析当前命令的local flags，通过开启`Command.TraverseChildren`参数，可以解析每个命令的local flags。
+
+```bash
+command := cobra.Command{
+  Use: "print [OPTIONS] [COMMANDS]",
+  TraverseChildren: true,
+}
+```
 
 ## 4. Bind Flags with Config
 
-> todo
+可以通过 [viper](https://github.com/spf13/viper)来绑定flags。
+
+```bash
+var author string
+
+func init() {
+  rootCmd.PersistentFlags().StringVar(&author, "author", "YOUR NAME", "Author name for copyright attribution")
+  viper.BindPFlag("author", rootCmd.PersistentFlags().Lookup("author"))
+}
+```
+
+更多参考： [viper documentation](https://github.com/spf13/viper#working-with-flags)。
 
 ## 5. Required flags
 
