@@ -1,6 +1,6 @@
 # 类型
 
-## 1. 基础类型
+# 1. 基础类型
 
 ## 1.1. 布尔类型
 
@@ -85,7 +85,7 @@ str="hello world"
 
 ## 1.7. 错误类型（error）
 
-## 2. 复合类型
+# 2. 复合类型
 
 ## 2.1. 数组(array)
 
@@ -206,13 +206,13 @@ if _, ok := myMap[valueX]; ok {
 ```
 
 ## 2.4. 指针(pointer)
-具体参考[Go语言指针详解](http://blog.csdn.net/huwh_/article/details/77879970)
+具体参考[Go语言指针详解](https://www.huweihuang.com/golang-notes/oop/pointer.html)
 
 ## 2.5. 结构体(struct)
-具体参考[Go面向对象编程之结构体](http://blog.csdn.net/huwh_/article/details/53710495#t3)
+具体参考[Go面向对象编程之结构体](https://www.huweihuang.com/golang-notes/oop/method.html)
 
 ## 2.6. 接口(interface)
-具体参考[Go面向对象编程之接口](http://blog.csdn.net/huwh_/article/details/53710495#t8)
+具体参考[Go面向对象编程之接口](https://www.huweihuang.com/golang-notes/oop/interface/interface.html)
 
 ## 2.7. 通道(chan)
-具体参考[Go并发编程之channel](http://blog.csdn.net/huwh_/article/details/74858134#t5)
+具体参考[Go并发编程之channel](https://www.huweihuang.com/golang-notes/concurrency/channel.html)

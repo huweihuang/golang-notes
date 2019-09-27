@@ -16,7 +16,8 @@
 ## 前言
 
 * [序言](README.md)
-* [Golang资源](introduction/go-resource.md)
+* [Golang资源](summary/go-resource.md)
+* [计算机语言概述](summary/language.md)
 
 ## 安装与配置
 
@@ -30,17 +31,20 @@
 
 ## 顺序编程
 
-* [程序结构](basis/program-structure.md)
-* [基本类型](basis/data-types.md)
-* [流程控制](basis/control-structures.md)
+* [变量与常量](basis/var-const.md)
+* [数据类型](basis/data-types.md)
+* [流程语句](basis/control-structures.md)
 * [函数与闭包](basis/functions.md)
 * [错误处理](basis/errors.md)
 
 ## 面向对象编程
 
 * [概述](oop/oop.md)
-* [方法](oop/method.md)
-* [接口](oop/interface.md)
+* [类与方法](oop/struct-method.md)
+* [接口]()
+    * [接口概述](oop/interface/interface.md)
+    * [client-go中接口](oop/interface/client-go-interface.md)
+    * [通用接口设计](oop/interface/common-interface.md)
 * [指针](oop/pointer.md)
 
 ## 并发编程

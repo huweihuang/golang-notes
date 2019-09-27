@@ -18,7 +18,7 @@
 |        | chan                                    | 定义管道，并发中channel通信          |
 | 并发编程   | go                                      | 并发编程                       |
 |        | select                                  | 用于选择不同类型通信                 |
-| 流程控制   | for；if，else；switch，case                 | 循环语句；条件语句；选择语句             |
+| 流程语句   | for；if，else；switch，case                 | 循环语句；条件语句；选择语句             |
 |        | break，continue，fallthrough，default，goto | 跳转语句等                      |
 |        | return                                  | 函数返回值                      |
 |        | defer                                   | 延迟函数，用于return前释放资源         |
