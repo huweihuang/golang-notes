@@ -209,7 +209,7 @@ if _, ok := myMap[valueX]; ok {
 具体参考[Go语言指针详解](https://www.huweihuang.com/golang-notes/oop/pointer.html)
 
 ## 2.5. 结构体(struct)
-具体参考[Go面向对象编程之结构体](https://www.huweihuang.com/golang-notes/oop/method.html)
+具体参考[Go面向对象编程之结构体](https://www.huweihuang.com/golang-notes/oop/struct-method.html)
 
 ## 2.6. 接口(interface)
 具体参考[Go面向对象编程之接口](https://www.huweihuang.com/golang-notes/oop/interface/interface.html)
