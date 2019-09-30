@@ -1,4 +1,33 @@
-> 本文主要介绍cobra添加命令的具体使用操作。
+> 本文以cobra-demo为例介绍cobra添加命令的具体使用操作。
+
+# 0. cobra-demo 
+
+`cobra-demo`编译二进制执行的结果如下。具体代码参考：https://github.com/huweihuang/cobra-demo
+
+```bash
+ $ ./cobra-demo 
+A longer description that spans multiple lines and likely contains
+examples and usage of using your application. For example:
+
+Cobra is a CLI library for Go that empowers applications.
+This application is a tool to generate the needed files
+to quickly create a Cobra application.
+
+Usage:
+  cobra-demo [command]
+
+Available Commands:
+  config      A brief description of your command
+  help        Help about any command
+  server      A brief description of your command
+
+Flags:
+      --config string   config file (default is $HOME/.cobra-demo.yaml)
+  -h, --help            help for cobra-demo
+  -t, --toggle          Help message for toggle
+
+Use "cobra-demo [command] --help" for more information about a command.
+```
 
 # 1. cobra init
 
@@ -7,8 +36,7 @@
 ## 1.1. cobra init --pkg-name
 
 ```bash
-mkdir -p newApp && cd newApp
-cobra init --pkg-name github.com/spf13/newApp
+cobra init <cobra-demo> --pkg-name github.com/huweihuang/cobra-demo -a 'author name <email>'
 ```
 
 执行以上命令，创建的文件目录结构如下：
@@ -127,9 +155,9 @@ func initConfig() {
 ## 2.1. cobra add command
 
 ```bash
-cobra add serve
-cobra add config
-cobra add create -p 'configCmd' # 在父命令config命令下创建子命令create,若没有指定-p,默认的父命令为rootCmd。
+cobra add serve -a 'author name <email>'
+cobra add config -a 'author name <email>'
+cobra add create -p 'configCmd' -a 'author name <email>'# 在父命令config命令下创建子命令create,若没有指定-p,默认的父命令为rootCmd。
 ```
 
 执行以上命令，创建的文件目录结构如下：
