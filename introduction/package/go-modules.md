@@ -1,6 +1,6 @@
 # 1. Go modules简介
 
-`Go 1.11`版本开始支持`Go modules`方式的依赖包管理功能，官网参考：https://github.com/golang/go/wiki/Modules。
+`Go 1.11`版本开始支持`Go modules`方式的依赖包管理功能，官网参考：https://github.com/golang/go/wiki/Modules 。
 
 
 # 2. [go mod的使用](https://github.com/golang/go/wiki/Modules#how-to-use-modules)

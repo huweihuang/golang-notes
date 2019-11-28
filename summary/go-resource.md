@@ -18,6 +18,8 @@
 
 - [CodeReviewComments](https://github.com/golang/go/wiki/CodeReviewComments)
 
+- [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md) | [中文版](https://github.com/xxjwxc/uber_go_guide_cn)
+
 ## 1.3. 补充
 
 - [Diagnostics](https://golang.org/doc/diagnostics.html)
