@@ -57,6 +57,8 @@
 ## 原理篇
 
 * [Goroutine调度](principle/go-scheduler.md)
+* [Go内存分配](principle/go-memory-allocate.md)
+* [Go垃圾回收](principle/go-garbage-collect.md)
 
 ## 文本处理
 
