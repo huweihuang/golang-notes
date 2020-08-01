@@ -2,19 +2,35 @@
 
 ```bash
 #!/bin/bash
-# for linux
 set -x
 set -e
 
-# default version: 1.10.3
+# default version
 VERSION=$1
-VERSION=${VERSION:-1.10.3}
+VERSION=${VERSION:-1.14.6}
+
+PLATFORM=$2
+PLATFORM=${PLATFORM:-linux}
+
 GOROOT="/usr/local/go"
 GOPATH=$HOME/gopath
+GO_DOWNLOAD_URL="https://golang.org/dl"
 
 # download and install
-wget https://dl.google.com/go/go${VERSION}.linux-amd64.tar.gz
-tar -C /usr/local -xzf go${VERSION}.linux-amd64.tar.gz
+case ${PLATFORM} in
+"linux")
+    wget ${GO_DOWNLOAD_URL}/go${VERSION}.${PLATFORM}-amd64.tar.gz
+    tar -C /usr/local -xzf go${VERSION}.${PLATFORM}-amd64.tar.gz
+    ;;
+"mac")
+    PLATFORM="darwin"
+    wget ${GO_DOWNLOAD_URL}/go${VERSION}.${PLATFORM}-amd64.tar.gz
+    tar -C /usr/local -xzf go${VERSION}.${PLATFORM}-amd64.tar.gz
+    ;;
+*)
+    echo "platform not found"
+    ;;
+esac    
 
 # set golang env
 cat >> $HOME/.bashrc << EOF 
@@ -34,7 +50,7 @@ mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 
 ```bash
 chmod +x install-go.sh
-./install-go.sh 1.10.3
+./install-go.sh 1.14.6 linux
 ```
 
 > 更多版本号可参考：https://golang.org/dl/
