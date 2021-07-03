@@ -49,3 +49,6 @@
 
 - 《Go语言实战》
 
+# 3. GitHub上优秀的Go项目
+
+![github_program](../images/golang_github_program.png)

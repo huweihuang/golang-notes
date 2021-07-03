@@ -51,7 +51,10 @@ go: extracting rsc.io/sampler v1.3.0
 go: downloading golang.org/x/text v0.0.0-20170915032832-14c0d48ead0c
 go: extracting golang.org/x/text v0.0.0-20170915032832-14c0d48ead0c
 
-# 加载依赖包，自动归档到vendor目录
+# 不添加vendor目录
+go mod tidy -v
+
+# 如果添加vendor目录，则执行vendor参数
 go mod vendor -v
 
 # 命令输出如下:
@@ -159,7 +162,22 @@ If possible, init will guess the module path from import comments
 To override this guess, supply the module path as an argument.
 ```
 
-## 4.2. go mod vendor
+## 4.2. go mod tidy
+
+```
+usage: go mod tidy [-v]
+
+Tidy makes sure go.mod matches the source code in the module.
+It adds any missing modules necessary to build the current module's
+packages and dependencies, and it removes unused modules that
+don't provide any relevant packages. It also adds any missing entries
+to go.sum and removes any unnecessary ones.
+
+The -v flag causes tidy to print information about removed modules
+to standard error.
+```
+
+## 4.3. go mod vendor
 
 ```bash
 go help mod vendor

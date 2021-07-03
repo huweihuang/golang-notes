@@ -12,9 +12,23 @@ Go语言中自带有一个轻量级的测试框架`testing`和自带的`go test`
 - 测试格式：`func TestXxx (t *testing.T)`,`Xxx`部分可以为任意的字母数字的组合，但是首字母不能是小写字母[a-z]，例如`Testintdiv`是错误的函数名。
 - 函数中通过调用`testing.T`的`Error`, `Errorf`, `FailNow`, `Fatal`, `FatalIf`方法，说明测试不通过，调用`Log`方法用来记录测试的信息。
 
-# 3. 示例
+# 3 测试常用命令
 
-## 3.1. 源文件getest.go
+```
+# 测试整个目录
+go test -v ./pkg/... ./cmd/... -coverprofile cover.out
+
+# 测试某个文件
+go test -v  file_test.go file.go 
+
+# 测试某个函数
+go test -v -test.run TestFunction
+```
+
+
+# 4. 示例
+
+## 4.1. 源文件getest.go
 
 ```go
 package gotest
@@ -29,7 +43,7 @@ func Division(a, b float64) (float64, error) {
 }
 ```
 
-## 3.2. 测试文件gotest_test.go
+## 4.2. 测试文件gotest_test.go
 
 ```go
 func Test_Division_2(t *testing.T) {
@@ -41,7 +55,7 @@ func Test_Division_2(t *testing.T) {
 }
 ```
 
-# 4. 压力测试
+# 5. 压力测试
 
 压力测试用来检测函数(方法）的性能，和编写单元功能测试的方法类似。
 
@@ -55,7 +69,7 @@ func Test_Division_2(t *testing.T) {
 - 在压力测试用例中,请记得在循环体内使用`testing.B.N`,以使测试可以正常的运行
 - 文件名也必须以`_test.go`结尾
 
-## 4.1. 示例
+## 5.1. 示例
 
 ```go
 package gotest
