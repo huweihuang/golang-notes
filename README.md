@@ -13,11 +13,11 @@
 
 # 目录
 
-## 前言
+## 概述
 
-* [序言](README.md)
 * [Golang资源](summary/go-resource.md)
 * [计算机语言概述](summary/language.md)
+* [后端开发技能树](summary/skill-tree.md)
 
 ## 安装与配置
 
@@ -54,10 +54,6 @@
 * [Channel](concurrency/channel.md)
 * [并行化](concurrency/parallelization.md)
 
-## 原理篇
-
-* [Goroutine调度](principle/go-scheduler.md)
-
 ## 文本处理
 
 * [Json处理](text/json.md)
@@ -69,6 +65,12 @@
 
 * [单元测试](test/test.md)
 * [GDB调试](test/gdb.md)
+
+---
+
+## 原理篇
+
+* [Goroutine调度](principle/go-scheduler.md)
 
 ## 框架与工具
 
