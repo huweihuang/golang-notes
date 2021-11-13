@@ -184,7 +184,7 @@
 
     
         
-        <li class="header">前言</li>
+        <li class="header">概述</li>
         
         
     
@@ -195,7 +195,7 @@
                     
                         <b>1.1.</b>
                     
-                    序言
+                    目录索引
             
                 </a>
             
@@ -226,6 +226,21 @@
                         <b>1.3.</b>
                     
                     计算机语言概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../summary/skill-tree.html">
+            
+                <a href="../summary/skill-tree.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    后端开发技能树
             
                 </a>
             
@@ -621,38 +636,16 @@
 
     
         
-        <li class="header">原理篇</li>
-        
-        
-    
-        <li class="chapter " data-level="6.1" data-path="../principle/go-scheduler.html">
-            
-                <a href="../principle/go-scheduler.html">
-            
-                    
-                        <b>6.1.</b>
-                    
-                    Goroutine调度
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
         <li class="header">文本处理</li>
         
         
     
-        <li class="chapter " data-level="7.1" data-path="../text/json.html">
+        <li class="chapter " data-level="6.1" data-path="../text/json.html">
             
                 <a href="../text/json.html">
             
                     
-                        <b>7.1.</b>
+                        <b>6.1.</b>
                     
                     Json处理
             
@@ -662,12 +655,12 @@
             
         </li>
     
-        <li class="chapter " data-level="7.2" data-path="../text/file.html">
+        <li class="chapter " data-level="6.2" data-path="../text/file.html">
             
                 <a href="../text/file.html">
             
                     
-                        <b>7.2.</b>
+                        <b>6.2.</b>
                     
                     文件操作
             
@@ -677,12 +670,12 @@
             
         </li>
     
-        <li class="chapter " data-level="7.3" data-path="../text/string.html">
+        <li class="chapter " data-level="6.3" data-path="../text/string.html">
             
                 <a href="../text/string.html">
             
                     
-                        <b>7.3.</b>
+                        <b>6.3.</b>
                     
                     字符串处理
             
@@ -692,12 +685,12 @@
             
         </li>
     
-        <li class="chapter " data-level="7.4" data-path="../text/template.html">
+        <li class="chapter " data-level="6.4" data-path="../text/template.html">
             
                 <a href="../text/template.html">
             
                     
-                        <b>7.4.</b>
+                        <b>6.4.</b>
                     
                     模板语法
             
@@ -714,12 +707,12 @@
         
         
     
-        <li class="chapter " data-level="8.1" data-path="../test/test.html">
+        <li class="chapter " data-level="7.1" data-path="../test/test.html">
             
                 <a href="../test/test.html">
             
                     
-                        <b>8.1.</b>
+                        <b>7.1.</b>
                     
                     单元测试
             
@@ -729,14 +722,81 @@
             
         </li>
     
-        <li class="chapter " data-level="8.2" data-path="../test/gdb.html">
+        <li class="chapter " data-level="7.2" data-path="../test/gdb.html">
             
                 <a href="../test/gdb.html">
             
                     
-                        <b>8.2.</b>
+                        <b>7.2.</b>
                     
                     GDB调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">原理篇</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../principle/go-scheduler.html">
+            
+                <a href="../principle/go-scheduler.html">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    Goroutine调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../principle/memory-allocation.html">
+            
+                <a href="../principle/memory-allocation.html">
+            
+                    
+                        <b>8.2.</b>
+                    
+                    Go内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../principle/garbage-collection.html">
+            
+                <a href="../principle/garbage-collection.html">
+            
+                    
+                        <b>8.3.</b>
+                    
+                    Go垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../principle/understand-channel.html">
+            
+                <a href="../principle/understand-channel.html">
+            
+                    
+                        <b>8.4.</b>
+                    
+                    深入理解Channel
             
                 </a>
             
@@ -987,7 +1047,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="goroutine">Goroutine</h1>
+                                <h1 id="1-goroutine">1. Goroutine</h1>
 <pre class="language-"><code class="lang-go"><span class="token comment">//&#x5B9A;&#x4E49;&#x8C03;&#x7528;&#x4F53;</span>
 <span class="token keyword">func</span> <span class="token function">Add</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   z<span class="token operator">:=</span>x<span class="token operator">+</span>y
@@ -1003,8 +1063,178 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<footer class="page-footer"><span class="copyright">Copyright &#xA9; www.huweihuang.com 2017-2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Updated at 
-2019-06-30 12:14:09
+<h1 id="2-syncwaitgroup">2. sync.WaitGroup</h1>
+<p>sync.WaitGroup&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x542F;&#x52A8;&#x4E00;&#x7EC4;goroutine&#xFF0C;&#x5E76;&#x7B49;&#x5F85;&#x4EFB;&#x52A1;&#x505A;&#x5B8C;&#x518D;&#x7ED3;&#x675F;goroutine&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x662F;&#xFF1A;</p>
+<ul>
+<li>wg.Add()&#xFF1A;main&#x534F;&#x7A0B;&#x901A;&#x8FC7;&#x8C03;&#x7528; wg.Add(delta int) &#x8BBE;&#x7F6E;worker&#x534F;&#x7A0B;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;worker&#x534F;&#x7A0B;&#xFF1B;</li>
+<li>wg.Done()&#xFF1A;worker&#x534F;&#x7A0B;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x4EE5;&#x540E;&#xFF0C;&#x90FD;&#x8981;&#x8C03;&#x7528; wg.Done()&#xFF0C;&#x8868;&#x793A;&#x505A;&#x5B8C;&#x4EFB;&#x52A1;&#xFF0C;goroutine&#x51CF;1&#xFF1B;</li>
+<li>wg.Wait() &#xFF1A;main&#x534F;&#x7A0B;&#x8C03;&#x7528; wg.Wait() &#x4E14;&#x88AB;block&#xFF0C;&#x76F4;&#x5230;&#x6240;&#x6709;worker&#x534F;&#x7A0B;&#x5168;&#x90E8;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x540E;&#x8FD4;&#x56DE;&#x3002;</li>
+<li>&#x9488;&#x5BF9;&#x53EF;&#x80FD;panic&#x7684;goroutine&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;defer wg.Done()&#x6765;&#x7ED3;&#x675F;goroutine&#x3002;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+    <span class="token string">&quot;fmt&quot;</span>
+    <span class="token string">&quot;sync&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> wg sync<span class="token punctuation">.</span>WaitGroup
+    <span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">9</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+        wg<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">go</span> <span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+            wg<span class="token punctuation">.</span><span class="token function">Done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    wg<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF0C;&#x968F;&#x673A;&#x8F93;&#x51FA;0&#x5230;9&#x7684;&#x6570;&#x5B57;</p>
+<pre class="language-"><code>9
+5
+6
+7
+8
+1
+0
+3
+4
+2
+</code></pre><h1 id="3-syncmap">3. sync.Map</h1>
+<p>Go &#x8BED;&#x8A00;&#x539F;&#x751F; map &#x5E76;&#x4E0D;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x5BF9;&#x5B83;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x52A0;&#x9501;&#x3002;sync.map &#x5219;&#x662F;&#x4E00;&#x79CD;&#x5E76;&#x53D1;&#x5B89;&#x5168;&#x7684; map&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5728;&#x5E76;&#x53D1;&#x8BFB;&#x5199;map&#x7684;&#x573A;&#x666F;&#x4E2D;&#x3002;</p>
+<p>sync.Map&#x5E38;&#x89C1;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<ul>
+<li>&#x5199;&#x5165;&#xFF1A;m.Store(&quot;1&quot;, 18)</li>
+<li>&#x8BFB;&#x53D6;&#xFF1A;age, ok := m.Load(&quot;1&quot;)</li>
+<li>&#x5220;&#x9664;&#xFF1A;m.Delete(&quot;1&quot;)</li>
+<li>&#x904D;&#x5386;&#xFF1A;m.Range(func(key, value interface{}) bool{}</li>
+<li>&#x5B58;&#x5728;&#x5219;&#x8BFB;&#x53D6;&#x5426;&#x5219;&#x5199;&#x5165;&#xFF1A;    m.LoadOrStore(&quot;2&quot;, 100)</li>
+</ul>
+<pre class="language-"><code class="lang-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+    <span class="token string">&quot;fmt&quot;</span>
+    <span class="token string">&quot;sync&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> m sync<span class="token punctuation">.</span>Map
+    <span class="token comment">// 1. &#x5199;&#x5165;</span>
+    m<span class="token punctuation">.</span><span class="token function">Store</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span>
+    m<span class="token punctuation">.</span><span class="token function">Store</span><span class="token punctuation">(</span><span class="token string">&quot;2&quot;</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 2. &#x8BFB;&#x53D6;</span>
+    age<span class="token punctuation">,</span> ok <span class="token operator">:=</span> m<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>age<span class="token punctuation">,</span> ok<span class="token punctuation">)</span>
+
+    <span class="token comment">// 3. &#x904D;&#x5386;</span>
+    m<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+        name <span class="token operator">:=</span> key<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span>
+        age <span class="token operator">:=</span> value<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 4. &#x5220;&#x9664;</span>
+    m<span class="token punctuation">.</span><span class="token function">Delete</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span>
+    age<span class="token punctuation">,</span> ok <span class="token operator">=</span> m<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>age<span class="token punctuation">,</span> ok<span class="token punctuation">)</span>
+
+    <span class="token comment">// 5. &#x5982;&#x679C;key&#x5B58;&#x5728;&#x5219;&#x8BFB;&#x53D6;&#xFF0C;&#x5426;&#x5219;&#x5199;&#x5165;&#x7ED9;&#x5B9A;&#x7684;&#x503C;</span>
+    m<span class="token punctuation">.</span><span class="token function">LoadOrStore</span><span class="token punctuation">(</span><span class="token string">&quot;2&quot;</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+    age<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">=</span> m<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span><span class="token string">&quot;2&quot;</span><span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>&#x4EE5;&#x4E0B;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#x7684;map&#xFF0C;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x5199;&#x5165;&#xFF0C;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x5E76;&#x53D1;&#x62A5;&#x9519;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x52A0;&#x9501;&#x6765;&#x89E3;&#x51B3;&#x5E76;&#x53D1;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x66F4;&#x63A8;&#x8350;&#x4F7F;&#x7528;sync.Map&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<pre class="language-"><code>fatal error: concurrent map writes
+</code></pre><p>&#x793A;&#x4F8B;1&#xFF1A;</p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+    <span class="token string">&quot;fmt&quot;</span>
+    <span class="token string">&quot;math/rand&quot;</span>
+    <span class="token string">&quot;sync&quot;</span>
+    <span class="token string">&quot;time&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x751F;&#x6210;&#x968F;&#x673A;&#x79CD;&#x5B50;</span>
+    rand<span class="token punctuation">.</span><span class="token function">Seed</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Unix</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    sm <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">)</span>
+    <span class="token keyword">var</span> wg sync<span class="token punctuation">.</span>WaitGroup
+    <span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">9</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+        wg<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">go</span> <span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> j <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> <span class="token number">9</span><span class="token punctuation">;</span> j<span class="token operator">++</span> <span class="token punctuation">{</span>
+                r <span class="token operator">:=</span> rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token comment">// &#x751F;&#x6210;0-99&#x7684;&#x968F;&#x673A;&#x6570;</span>
+                sm<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> r  <span class="token comment">// &#x540C;&#x65F6;&#x5BF9;map&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x5199;&#x5165;</span>
+            <span class="token punctuation">}</span>
+
+            wg<span class="token punctuation">.</span><span class="token function">Done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    wg<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// &#x6253;&#x5370;map&#x4E2D;&#x7684;&#x503C;</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>sm<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x793A;&#x4F8B;2&#xFF1A;</p>
+<p>&#x4EE5;&#x4E0B;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;sync.Map&#x6765;&#x5B9E;&#x73B0;&#x5BF9;map&#x7684;&#x503C;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x7684;&#x8BFB;&#x5199;&#x3002;</p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+    <span class="token string">&quot;fmt&quot;</span>
+    <span class="token string">&quot;math/rand&quot;</span>
+    <span class="token string">&quot;sync&quot;</span>
+    <span class="token string">&quot;time&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x751F;&#x6210;&#x968F;&#x673A;&#x79CD;&#x5B50;</span>
+    rand<span class="token punctuation">.</span><span class="token function">Seed</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Unix</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment">// &#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;sync.Map</span>
+    <span class="token keyword">var</span> sm sync<span class="token punctuation">.</span>Map
+    <span class="token keyword">var</span> wg sync<span class="token punctuation">.</span>WaitGroup
+    <span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">9</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+        wg<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">go</span> <span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> j <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> <span class="token number">9</span><span class="token punctuation">;</span> j<span class="token operator">++</span> <span class="token punctuation">{</span>
+                r <span class="token operator">:=</span> rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token comment">// &#x751F;&#x6210;0-99&#x7684;&#x968F;&#x673A;&#x6570;</span>
+                sm<span class="token punctuation">.</span><span class="token function">Store</span><span class="token punctuation">(</span>j<span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+
+            wg<span class="token punctuation">.</span><span class="token function">Done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    wg<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// &#x6253;&#x5370;map&#x4E2D;&#x7684;&#x503C;</span>
+    sm<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> v <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6B63;&#x5E38;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre class="language-"><code>2 92
+4 5
+8 48
+9 6
+0 50
+1 64
+6 27
+7 86
+3 59
+5 57
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; www.huweihuang.com 2017-2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Updated at 
+2021-11-13 21:18:34
 </span></footer>
                                 
                                 </section>
@@ -1048,7 +1278,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Goroutine","level":"5.2","depth":1,"next":{"title":"Channel","level":"5.3","depth":1,"path":"concurrency/channel.md","ref":"concurrency/channel.md","articles":[]},"previous":{"title":"并发基础","level":"5.1","depth":1,"path":"concurrency/concurrency.md","ref":"concurrency/concurrency.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","ga","disqus","donate"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © www.huweihuang.com 2017-2018","modify_label":"Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"disqus":{"useIdentifier":false,"shortName":"huweihuang"},"github":{"url":"https://github.com/huweihuang"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/huweihuang/golang-notes/blob/master/"},"splitter":{},"donate":{"alipay":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1551599640/blog/donate/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1551599472/blog/donate/wechatpay.jpg","wechatText":"微信打赏"},"codesnippet":{},"sitemap-general":{"prefix":"https://www.huweihuang.com/golang-notes/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico","appleTouch":"images/favicon.ico","appleTouchMore":{"120x120":"images/favicon.ico","180x180":"images/favicon.ico"}},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"huweihuang/golang-notes","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"e146d71b77957235bba1e709d930f62e"},"ga":{"configuration":"auto","token":"UA-114718458-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"胡伟煌","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"summary/language.html#fig1.3.1","level":"1.3","list_caption":"Figure: 计算机语言","alt":"计算机语言","nro":1,"url":"http://assets.processon.com/chart_image/5d7ce0d3e4b01080c73ee670.png","index":1,"caption_template":"图片 - _CAPTION_","label":"计算机语言","attributes":{},"skip":false,"key":"1.3.1"},{"backlink":"basis/data-types.html#fig3.2.1","level":"3.2","list_caption":"Figure: 这里写图片描述","alt":"这里写图片描述","nro":2,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578663/article/golang/basics/bit-operation.png","index":1,"caption_template":"图片 - _CAPTION_","label":"这里写图片描述","attributes":{},"skip":false,"key":"3.2.1"},{"backlink":"basis/data-types.html#fig3.2.2","level":"3.2","list_caption":"Figure: 这里写图片描述","alt":"这里写图片描述","nro":3,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578664/article/golang/basics/string.png","index":2,"caption_template":"图片 - _CAPTION_","label":"这里写图片描述","attributes":{},"skip":false,"key":"3.2.2"},{"backlink":"oop/pointer.html#fig4.4.1","level":"4.4","list_caption":"Figure: 什么是变量","alt":"什么是变量","nro":4,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/var1.png","index":1,"caption_template":"图片 - _CAPTION_","label":"什么是变量","attributes":{},"skip":false,"key":"4.4.1"},{"backlink":"oop/pointer.html#fig4.4.2","level":"4.4","list_caption":"Figure: 什么是变量2","alt":"什么是变量2","nro":5,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/var2.png","index":2,"caption_template":"图片 - _CAPTION_","label":"什么是变量2","attributes":{},"skip":false,"key":"4.4.2"},{"backlink":"oop/pointer.html#fig4.4.3","level":"4.4","list_caption":"Figure: 什么是指针","alt":"什么是指针","nro":6,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578751/article/golang/pointer/pointer1.png","index":3,"caption_template":"图片 - _CAPTION_","label":"什么是指针","attributes":{},"skip":false,"key":"4.4.3"},{"backlink":"oop/pointer.html#fig4.4.4","level":"4.4","list_caption":"Figure: 什么是指针2","alt":"什么是指针2","nro":7,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578751/article/golang/pointer/pointer2.png","index":4,"caption_template":"图片 - _CAPTION_","label":"什么是指针2","attributes":{},"skip":false,"key":"4.4.4"},{"backlink":"oop/pointer.html#fig4.4.5","level":"4.4","list_caption":"Figure: 什么是指针3","alt":"什么是指针3","nro":8,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/pointer3.png","index":5,"caption_template":"图片 - _CAPTION_","label":"什么是指针3","attributes":{},"skip":false,"key":"4.4.5"},{"backlink":"oop/pointer.html#fig4.4.6","level":"4.4","list_caption":"Figure: 什么是指针4","alt":"什么是指针4","nro":9,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/pointer4.png","index":6,"caption_template":"图片 - _CAPTION_","label":"什么是指针4","attributes":{},"skip":false,"key":"4.4.6"},{"backlink":"web/beego/beego-introduction.html#fig10.1.1.1","level":"10.1.1","list_caption":"Figure: architecture","alt":"architecture","nro":10,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578706/article/golang/beego/architecture.png","index":1,"caption_template":"图片 - _CAPTION_","label":"architecture","attributes":{},"skip":false,"key":"10.1.1.1"},{"backlink":"web/beego/beego-introduction.html#fig10.1.1.2","level":"10.1.1","list_caption":"Figure: flow","alt":"flow","nro":11,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578706/article/golang/beego/flow.png","index":2,"caption_template":"图片 - _CAPTION_","label":"flow","attributes":{},"skip":false,"key":"10.1.1.2"},{"backlink":"web/beego/beego-project.html#fig10.1.3.1","level":"10.1.3","list_caption":"Figure: init","alt":"init","nro":12,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578706/article/golang/beego/init.png","index":1,"caption_template":"图片 - _CAPTION_","label":"init","attributes":{},"skip":false,"key":"10.1.3.1"},{"backlink":"web/golang-http-execution-flow.html#fig10.2.1","level":"10.2","list_caption":"Figure: image2017-3-5 22-46-35","alt":"image2017-3-5 22-46-35","nro":13,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578729/article/golang/http/http-flow.png","index":1,"caption_template":"图片 - _CAPTION_","label":"image2017-3-5 22-46-35","attributes":{},"skip":false,"key":"10.2.1"},{"backlink":"web/golang-http-execution-flow.html#fig10.2.2","level":"10.2","list_caption":"Figure: image2017-3-5 23-50-6","alt":"image2017-3-5 23-50-6","nro":14,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578730/article/golang/http/http-connect-flow.png","index":2,"caption_template":"图片 - _CAPTION_","label":"image2017-3-5 23-50-6","attributes":{},"skip":false,"key":"10.2.2"}]},"title":"Golang 学习笔记","language":"zh-hans","links":{"sidebar":{"胡伟煌的博客":"https://www.huweihuang.com","Kubernetes 学习笔记":"https://www.huweihuang.com/kubernetes-notes/","Golang 学习笔记":"https://www.huweihuang.com/golang-notes/","Linux 学习笔记":"https://www.huweihuang.com/linux-notes/","数据结构学习笔记":"https://www.huweihuang.com/data-structure-notes/","Python 学习笔记":"https://www.huweihuang.com/python-notes/","Blockchain 学习笔记":"https://www.huweihuang.com/blockchain-notes/"}},"gitbook":"*","description":"Golang 学习笔记"},"file":{"path":"concurrency/goroutine.md","mtime":"2019-06-30T04:14:09.515Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-01T07:46:22.409Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Goroutine","level":"5.2","depth":1,"next":{"title":"Channel","level":"5.3","depth":1,"path":"concurrency/channel.md","ref":"concurrency/channel.md","articles":[]},"previous":{"title":"并发基础","level":"5.1","depth":1,"path":"concurrency/concurrency.md","ref":"concurrency/concurrency.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","ga","disqus","donate"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © www.huweihuang.com 2017-2018","modify_label":"Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"disqus":{"useIdentifier":false,"shortName":"huweihuang"},"github":{"url":"https://github.com/huweihuang"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/huweihuang/golang-notes/blob/master/"},"splitter":{},"donate":{"alipay":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1551599640/blog/donate/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1551599472/blog/donate/wechatpay.jpg","wechatText":"微信打赏"},"codesnippet":{},"sitemap-general":{"prefix":"https://www.huweihuang.com/golang-notes/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico","appleTouch":"images/favicon.ico","appleTouchMore":{"120x120":"images/favicon.ico","180x180":"images/favicon.ico"}},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"huweihuang/golang-notes","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"e146d71b77957235bba1e709d930f62e"},"ga":{"configuration":"auto","token":"UA-114718458-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"胡伟煌","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"summary/go-resource.html#fig1.2.1","level":"1.2","list_caption":"Figure: github_program","alt":"github_program","nro":1,"url":"../images/golang_github_program.png","index":1,"caption_template":"图片 - _CAPTION_","label":"github_program","attributes":{},"skip":false,"key":"1.2.1"},{"backlink":"summary/language.html#fig1.3.1","level":"1.3","list_caption":"Figure: 计算机语言","alt":"计算机语言","nro":2,"url":"http://assets.processon.com/chart_image/5d7ce0d3e4b01080c73ee670.png","index":1,"caption_template":"图片 - _CAPTION_","label":"计算机语言","attributes":{},"skip":false,"key":"1.3.1"},{"backlink":"summary/skill-tree.html#fig1.4.1","level":"1.4","list_caption":"Figure: 技能树","alt":"技能树","nro":3,"url":"../images/skill-tree.png","index":1,"caption_template":"图片 - _CAPTION_","label":"技能树","attributes":{},"skip":false,"key":"1.4.1"},{"backlink":"basis/data-types.html#fig3.2.1","level":"3.2","list_caption":"Figure: 这里写图片描述","alt":"这里写图片描述","nro":4,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578663/article/golang/basics/bit-operation.png","index":1,"caption_template":"图片 - _CAPTION_","label":"这里写图片描述","attributes":{},"skip":false,"key":"3.2.1"},{"backlink":"basis/data-types.html#fig3.2.2","level":"3.2","list_caption":"Figure: 这里写图片描述","alt":"这里写图片描述","nro":5,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578664/article/golang/basics/string.png","index":2,"caption_template":"图片 - _CAPTION_","label":"这里写图片描述","attributes":{},"skip":false,"key":"3.2.2"},{"backlink":"oop/pointer.html#fig4.4.1","level":"4.4","list_caption":"Figure: 什么是变量","alt":"什么是变量","nro":6,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/var1.png","index":1,"caption_template":"图片 - _CAPTION_","label":"什么是变量","attributes":{},"skip":false,"key":"4.4.1"},{"backlink":"oop/pointer.html#fig4.4.2","level":"4.4","list_caption":"Figure: 什么是变量2","alt":"什么是变量2","nro":7,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/var2.png","index":2,"caption_template":"图片 - _CAPTION_","label":"什么是变量2","attributes":{},"skip":false,"key":"4.4.2"},{"backlink":"oop/pointer.html#fig4.4.3","level":"4.4","list_caption":"Figure: 什么是指针","alt":"什么是指针","nro":8,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578751/article/golang/pointer/pointer1.png","index":3,"caption_template":"图片 - _CAPTION_","label":"什么是指针","attributes":{},"skip":false,"key":"4.4.3"},{"backlink":"oop/pointer.html#fig4.4.4","level":"4.4","list_caption":"Figure: 什么是指针2","alt":"什么是指针2","nro":9,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578751/article/golang/pointer/pointer2.png","index":4,"caption_template":"图片 - _CAPTION_","label":"什么是指针2","attributes":{},"skip":false,"key":"4.4.4"},{"backlink":"oop/pointer.html#fig4.4.5","level":"4.4","list_caption":"Figure: 什么是指针3","alt":"什么是指针3","nro":10,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/pointer3.png","index":5,"caption_template":"图片 - _CAPTION_","label":"什么是指针3","attributes":{},"skip":false,"key":"4.4.5"},{"backlink":"oop/pointer.html#fig4.4.6","level":"4.4","list_caption":"Figure: 什么是指针4","alt":"什么是指针4","nro":11,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578752/article/golang/pointer/pointer4.png","index":6,"caption_template":"图片 - _CAPTION_","label":"什么是指针4","attributes":{},"skip":false,"key":"4.4.6"},{"backlink":"web/beego/beego-introduction.html#fig10.1.1.1","level":"10.1.1","list_caption":"Figure: architecture","alt":"architecture","nro":12,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578706/article/golang/beego/architecture.png","index":1,"caption_template":"图片 - _CAPTION_","label":"architecture","attributes":{},"skip":false,"key":"10.1.1.1"},{"backlink":"web/beego/beego-introduction.html#fig10.1.1.2","level":"10.1.1","list_caption":"Figure: flow","alt":"flow","nro":13,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578706/article/golang/beego/flow.png","index":2,"caption_template":"图片 - _CAPTION_","label":"flow","attributes":{},"skip":false,"key":"10.1.1.2"},{"backlink":"web/beego/beego-project.html#fig10.1.3.1","level":"10.1.3","list_caption":"Figure: init","alt":"init","nro":14,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578706/article/golang/beego/init.png","index":1,"caption_template":"图片 - _CAPTION_","label":"init","attributes":{},"skip":false,"key":"10.1.3.1"},{"backlink":"web/golang-http-execution-flow.html#fig10.2.1","level":"10.2","list_caption":"Figure: image2017-3-5 22-46-35","alt":"image2017-3-5 22-46-35","nro":15,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578729/article/golang/http/http-flow.png","index":1,"caption_template":"图片 - _CAPTION_","label":"image2017-3-5 22-46-35","attributes":{},"skip":false,"key":"10.2.1"},{"backlink":"web/golang-http-execution-flow.html#fig10.2.2","level":"10.2","list_caption":"Figure: image2017-3-5 23-50-6","alt":"image2017-3-5 23-50-6","nro":16,"url":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1510578730/article/golang/http/http-connect-flow.png","index":2,"caption_template":"图片 - _CAPTION_","label":"image2017-3-5 23-50-6","attributes":{},"skip":false,"key":"10.2.2"}]},"title":"Golang 学习笔记","language":"zh-hans","links":{"sidebar":{"胡伟煌的博客":"https://www.huweihuang.com","Kubernetes 学习笔记":"https://www.huweihuang.com/kubernetes-notes/","Golang 学习笔记":"https://www.huweihuang.com/golang-notes/","Linux 学习笔记":"https://www.huweihuang.com/linux-notes/","数据结构学习笔记":"https://www.huweihuang.com/data-structure-notes/","Python 学习笔记":"https://www.huweihuang.com/python-notes/","Blockchain 学习笔记":"https://www.huweihuang.com/blockchain-notes/"}},"gitbook":"*","description":"Golang 学习笔记"},"file":{"path":"concurrency/goroutine.md","mtime":"2021-11-13T13:18:34.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-13T13:19:11.748Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
