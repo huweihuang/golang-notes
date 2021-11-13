@@ -59,6 +59,9 @@
 ## 原理篇
 
 * [Goroutine调度](principle/go-scheduler.md)
+* [Go内存分配](principle/memory-allocation.md)
+* [Go垃圾回收](principle/garbage-collection.md)
+* [深入理解Channel](principle/understand-channel.md)
 
 ## 框架与工具
 
