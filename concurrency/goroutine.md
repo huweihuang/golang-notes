@@ -119,11 +119,9 @@ func main() {
 
 示例：
 
-以下使用线程不安全的map，进行并发写入，就会出现并发报错。可以通过加锁来解决并发问题，但更推荐使用sync.Map来实现。
+## 3.1. 不加锁的map并发读写
 
-```
-fatal error: concurrent map writes
-```
+以下使用线程不安全的map，进行并发写入，就会出现并发报错。可以通过加锁来解决并发问题，但更推荐使用sync.Map来实现。
 
 示例1：
 
@@ -161,7 +159,83 @@ func main() {
 }
 ```
 
+输出异常：
+
+map不能并发写入。
+
+```
+fatal error: concurrent map writes
+```
+
+## 3.2. 加锁的并发读写
+
 示例2：
+
+```go
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"sync"
+	"time"
+)
+
+func main() {
+	// 生成随机种子
+	rand.Seed(time.Now().Unix())
+
+	sm := &SafeMap{
+		Map: make(map[int]int),
+	}
+	var wg sync.WaitGroup
+	for i := 0; i <= 9; i++ {
+		wg.Add(1)
+		go func(i int) {
+			for j := 0; j <= 9; j++ {
+				r := rand.Intn(100) // 生成0-99的随机数
+				sm.Set(i, r)        // 同时对map进行并发写入
+			}
+
+			wg.Done()
+		}(i)
+	}
+	wg.Wait()
+
+	// 打印map中的值
+	fmt.Println(sm.Map)
+}
+
+// SafeMap
+type SafeMap struct {
+	Map  map[int]int
+	lock sync.RWMutex // 加锁
+}
+
+// Set
+func (m *SafeMap) Set(key, value int) {
+	m.lock.Lock()
+	defer m.lock.Unlock()
+	m.Map[key] = value
+}
+
+// Get
+func (m *SafeMap) Get(key int) int {
+	return m.Map[key]
+}
+
+```
+
+正常输出
+
+```
+map[0:52 1:16 2:86 3:50 4:97 5:38 6:54 7:75 8:26 9:32]
+```
+
+
+## 3.3. 使用sync.Map并发读写
+
+示例3：
 
 以下使用线程安全的sync.Map来实现对map的值进行并发的读写。
 
