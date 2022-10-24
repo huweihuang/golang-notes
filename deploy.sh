@@ -5,10 +5,9 @@ set -e
 
 MESSAGE=$1
 
-PROGRAM="golang"
-GITBOOK_DIR="/Users/weihuanghu/hexo/gitbook"
-MASTER_DIR="${GITBOOK_DIR}/${PROGRAM}-notes"
-GHPAGE_DIR="${GITBOOK_DIR}/${PROGRAM}-gh-pages"
+# git clone -b  gh-pages https://github.com/huweihuang/golang-notes.git gh-pages
+MASTER_DIR="$(pwd)"
+GHPAGE_DIR="${MASTER_DIR}/gh-pages"
 # CODING_DIR="${GITBOOK_DIR}/${PROGRAM}-coding-pages"
 
 # build
