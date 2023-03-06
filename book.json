@@ -34,7 +34,8 @@
         "ga",
         "disqus",
         "donate",
-        "readmore"
+        "readmore",
+        "google-ads"
     ],
     "pluginsConfig": {
         "theme-default": {
@@ -56,7 +57,7 @@
             "size": "small"
         },
         "tbfed-pagefooter": {
-            "copyright": "Copyright © www.huweihuang.com 2017-2018",
+            "copyright": "Copyright © www.huweihuang.com",
             "modify_label": "Updated at ",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
@@ -100,6 +101,13 @@
             "name": "容器云架构",
             "qrcode": "https://res.cloudinary.com/dqxtn0ick/image/upload/v1551600382/blog/wechat-public-acconut.jpg",
             "keyword": "golang"
+        },
+        "google-ads": {
+            "ads": [
+                {
+                    "client": "ca-pub-8205636531078391"
+                }
+            ]
         }
     }
 }
